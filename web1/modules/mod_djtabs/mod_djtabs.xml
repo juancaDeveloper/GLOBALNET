@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5.0"  method="upgrade">
+	<name>DJ-Tabs</name>
+	<author>DJ-Extensions.com</author>
+	<creationDate>August 2013</creationDate>
+	<copyright>Copyright (C) 2013 DJ-Extensions.com LTD, All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <authorEmail>contact@design-jooma.eu</authorEmail>
+	<authorUrl>http://design-joomla.eu</authorUrl>
+	<version>1.3.5.1</version>
+	<description>DJ-Tabs module</description>
+	<files>
+		<filename module="mod_djtabs">mod_djtabs.php</filename>
+		<folder>tmpl</folder>
+		<folder>language</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/administrator/components/com_djtabs/models/fields">
+				<field name="group_id" type="sql" default="0"  key_field="id" value_field="title"
+					label="COM_DJTABS_SELECT_GROUP" query="SELECT id, title FROM #__djtabs_groups" required="true"/>		
+				<field 
+					name="theme"
+					type="djtheme" 
+					label="COM_DJTABS_SELECT_THEME"
+					required="true"
+				/>			
+				<field
+				name="layout"
+				type="list"
+				label="COM_DJTABS_SELECT_LAYOUT"
+				size="1"
+				default="tabs"
+				required="true"
+				>
+				<option value="default">
+					COM_DJTABS_LAYOUT_TABS</option>
+				<option value="accordion">
+					COM_DJTABS_LAYOUT_ACCORDION</option>			
+				</field>
+			</fieldset>
+			
+		    <fieldset name="OTHER" label="COM_DJTABS_OTHER_OPTIONS">
+				<field name="video_autopause"
+						type="list"
+						label="COM_DJTABS_VIDEO_AUTOPAUSE"
+						description="COM_DJTABS_VIDEO_AUTOPAUSE_DESC"
+						size=""
+						default=""
+					>
+					<option value="">COM_DJTABS_USE_GLOBAL</option>
+					<option value="1">COM_DJTABS_VIDEO_AUTOPAUSE_PLAY_PAUSE</option>
+					<option value="2">COM_DJTABS_VIDEO_AUTOPAUSE_PAUSE_ONLY</option>
+					<option value="3">COM_DJTABS_VIDEO_AUTOPAUSE_NONE</option>
+				</field>
+				
+				<field name="accordion_display"
+						type="list"
+						label="COM_DJTABS_ACCORDION_DISPLAY"
+						description="COM_DJTABS_ACCORDION_DISPLAY_DESC"
+						size=""
+						default=""
+					>
+					<option value="">COM_DJTABS_USE_GLOBAL</option>
+					<option value="1">COM_DJTABS_ACCORDION_DISPLAY_FIRST_OUT</option>
+					<option value="2">COM_DJTABS_ACCORDION_DISPLAY_ALL_IN</option>
+				</field>
+				<field name="tabs_hidden"
+						type="list"
+						label="COM_DJTABS_TABS_HIDDEN"
+						description="COM_DJTABS_TABS_HIDDEN_DESC"
+						size=""
+						default="2"
+					>
+					<option value="1">JYES</option>
+					<option value="2">JNO</option>
+				</field>
+				<field name="rows_number"
+						type="inputbox"
+						label="COM_DJTABS_ROWS_NUMBER"
+						description="COM_DJTABS_ROWS_NUMBER_DESC"
+						default=""
+						class="param_number"
+				/>
+				<field name="tabs_trigger"
+					type="list"
+					label="COM_DJTABS_TABS_TRIGGER"
+					description="COM_DJTABS_TABS_TRIGGER_DESC"
+					size=""
+					default=""
+				>
+				<option value="">COM_DJTABS_USE_GLOBAL</option>
+				<option value="1">COM_DJTABS_TABS_TRIGGER_CLICK</option>
+				<option value="2">COM_DJTABS_TABS_TRIGGER_HOVER</option>
+			</field>
+			<field name="scroll_to_accordion"
+					type="list"
+					label="COM_DJTABS_SCROLL_TO_ACCORDION"
+					description="COM_DJTABS_SCROLL_TO_ACCORDION_DESC"
+					size=""
+					default=""
+				>
+				<option value="">COM_DJTABS_USE_GLOBAL</option>
+				<option value="0">JNO</option>
+				<option value="1">COM_DJTABS_SCROLL_TO_ACCORDION_MAIN</option>
+				<option value="2">COM_DJTABS_SCROLL_TO_ACCORDION_INNER</option>
+				<option value="3">COM_DJTABS_SCROLL_TO_ACCORDION_BOTH</option>
+			</field>
+			<field name="truncate_titles"
+					type="list"
+					label="COM_DJTABS_TRUNCATE_TITLES"
+					description="COM_DJTABS_TRUNCATE_TITLES_DESC"
+					size=""
+					default=""
+				>
+				<option value="">COM_DJTABS_USE_GLOBAL</option>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="tab"
+				type="inputbox"
+				label="COM_DJTABS_START_ITEM"
+				description="COM_DJTABS_START_ITEM_DESC"
+				default=""
+				class="param_number"
+			/>
+			</fieldset>
+			<fieldset name="advanced">
+					<field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+					<field name="video_fix"
+						type="list"
+						label="COM_DJTABS_VIDEO_FIX"
+						description="COM_DJTABS_VIDEO_FIX_DESC"
+						size=""
+						default="0"
+					>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+			</fieldset>				
+		</fields>
+	</config>
+</extension>

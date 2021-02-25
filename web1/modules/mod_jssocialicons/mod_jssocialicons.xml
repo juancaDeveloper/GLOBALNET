@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.7" type="module" method="upgrade">
+    <name>MOD_JSSOCIALICON</name>
+    <creationDate>August 28 2018</creationDate>
+    <author>Joomlashack</author>
+    <authorEmail>help@joomlashack.com</authorEmail>
+    <copyright>Joomlashack</copyright>
+    <license>GNU/GPL v2 http://www.gnu.org/copyleft/gpl.html</license>
+    <version>3.1.5</version>
+    <variant>PRO</variant>
+    <description>MOD_JSSOCIALICON_DESCRIPTION</description>
+
+    <scriptfile>script.installer.php</scriptfile>
+
+    <files>
+        <filename module="mod_jssocialicons">mod_jssocialicons.php</filename>
+        <filename>helper.php</filename>
+        <filename>include.php</filename>
+        <filename>index.html</filename>
+        <folder>assets</folder>
+        <folder>tmpl</folder>
+        <folder>library</folder>
+        <folder>form</folder>
+        <folder>views</folder>
+        <folder>language</folder>
+    </files>
+
+    <media destination="mod_jssocialicons" folder="media">
+        <folder>css</folder>
+        <folder>js</folder>
+        <folder>images</folder>
+        <folder>fonts</folder>
+    </media>
+
+    <config>
+        <fields name="params"
+                addfieldpath="modules/mod_jssocialicons/form/fields">
+
+            <fieldset name="basic">
+                <field type="customfooter"
+                       name="customfooter"
+                       media="mod_jssocialicons"
+                       showgoproad="0"
+                       jedurl="https://extensions.joomla.org/extension/js-easy-social-icons/"/>
+            </fieldset>
+
+            <fieldset name='socialnetworks'
+                      label='SOCIALICONS_SOCIAL_NETWORKS_FIELDSET_LABEL'>
+                <field name="delicious"
+                       type="text"
+                       label="SOCIALICONS_DELICIOUS_LABEL"
+                       description="SOCIALICONS_DELICIOUS_DESC"/>
+
+                <field name="digg"
+                       type="text"
+                       label="SOCIALICONS_DIGG_LABEL"
+                       description="SOCIALICONS_DIGG_DESC"/>
+
+                <field name="dribbble"
+                       type="text"
+                       label="SOCIALICONS_DRIBBBLE_LABEL"
+                       description="SOCIALICONS_DRIBBBLE_DESC"/>
+
+                <field name="facebook"
+                       type="text"
+                       label="SOCIALICONS_FACEBOOK_LABEL"
+                       description="SOCIALICONS_FACEBOOK_DESC"/>
+
+                <field name="flickr"
+                       type="text"
+                       label="SOCIALICONS_FLICKR_LABEL"
+                       description="SOCIALICONS_FLICKR_DESC"/>
+
+                <field name="foursquare"
+                       type="text"
+                       label="SOCIALICONS_FOURSQUARE_LABEL"
+                       description="SOCIALICONS_FOURSQUARE_DESC"/>
+
+                <field name="google-plus"
+                       type="text"
+                       label="SOCIALICONS_GOOGLEPLUS_LABEL"
+                       description="SOCIALICONS_GOOGLEPLUS_DESC"/>
+
+                <field name="instagram"
+                       type="text"
+                       label="SOCIALICONS_INSTAGRAM_LABEL"
+                       description="SOCIALICONS_INSTAGRAM_DESC"/>
+
+                <field name="lastfm"
+                       type="text"
+                       label="SOCIALICONS_LASTFM_LABEL"
+                       description="SOCIALICONS_LASTFM_DESC"/>
+
+                <field name="linkedin"
+                       type="text"
+                       label="SOCIALICONS_LINKEDIN_LABEL"
+                       description="SOCIALICONS_LINKEDIN_DESC"/>
+
+                <field name="meetup"
+                       type="text"
+                       label="SOCIALICONS_MEETUP_LABEL"
+                       description="SOCIALICONS_MEETUP_DESC"/>
+
+                <field name="pinterest"
+                       type="text"
+                       label="SOCIALICONS_PINTEREST_LABEL"
+                       description="SOCIALICONS_PINTEREST_DESC"/>
+
+                <field name="stumbleupon"
+                       type="text"
+                       label="SOCIALICONS_STUMBLEUPON_LABEL"
+                       description="SOCIALICONS_STUMBLEUPON_DESC"/>
+
+                <field name="tumblr"
+                       type="text"
+                       label="SOCIALICONS_TUMBLR_LABEL"
+                       description="SOCIALICONS_TUMBLR_DESC"/>
+
+                <field name="twitter"
+                       type="text"
+                       label="SOCIALICONS_TWITTER_LABEL"
+                       description="SOCIALICONS_TWITTER_DESC"/>
+
+                <field name="vimeo"
+                       type="text"
+                       label="SOCIALICONS_VIMEO_LABEL"
+                       description="SOCIALICONS_VIMEO_DESC"/>
+
+                <field name="vine"
+                       type="text"
+                       label="SOCIALICONS_VINE_LABEL"
+                       description="SOCIALICONS_VINE_DESC"/>
+
+                <field name="youtube"
+                       type="text"
+                       label="SOCIALICONS_YOUTUBE_LABEL"
+                       description="SOCIALICONS_YOUTUBE_DESC"/>
+
+                <field name="youtubeType"
+                       type="list"
+                       default="channel/"
+                       label="SOCIALICONS_YOUTUBE_TYPE_LABEL"
+                       description="SOCIALICONS_YOUTUBE_TYPE_DESC">
+                    <option value="/channel/">youtube.com/channel/something</option>
+                    <option value="/">youtube.com/something</option>
+                </field>
+
+                <field name="yelp"
+                       type="text"
+                       label="SOCIALICONS_YELP_LABEL"
+                       description="SOCIALICONS_YELP_DESC"/>
+            </fieldset>
+
+            <fieldset name='style'
+                      label='SOCIALICONS_STYLE_FIELDSET_LABEL'>
+                <field name="iconset"
+                       type='settingicons'
+                       default='elegant'
+                       label='SOCIALICONS_ICONSET_LABEL'
+                       description='SOCIALICONS_ICONSET_DESC'>
+                    <option value="blacksquare">SOCIALICONS_BLACKSQUARE</option>
+                    <option value="circular">SOCIALICONS_CIRCULAR</option>
+                    <option value="elegant">SOCIALICONS_ELEGANT</option>
+                    <option value="flat">SOCIALICONS_FLAT</option>
+                    <option value="whitesquare">SOCIALICONS_WHITESQUARE</option>
+                    <option value="templatedesign">SOCIALICONS_TEMPLATE_DESIGN</option>
+                </field>
+
+                <field name='iconsize'
+                       type='list'
+                       default='16'
+                       label='SOCIALICONS_ICONSET_SIZE_LABEL'
+                       description='SOCIALICONS_ICONSET_SIZE_DESC'>
+                    <option value="16">16px</option>
+                    <option value="24">24px</option>
+                    <option value="32">32px</option>
+                    <option value="48">48px</option>
+                    <option value="64">64px</option>
+                </field>
+
+                <field name='orientation'
+                       type='list'
+                       default='horizontal'
+                       label='SOCIALICONS_ORIENTATION_LABEL'
+                       description='SOCIALICONS_ORIENTATION_DESC'>
+                    <option value="horizontal">Horizontal</option>
+                    <option value="vertical">Vertical</option>
+                </field>
+
+                <field name='textbefore'
+                       type='text'
+                       default=''
+                       label='SOCIALICONS_TEXTBEFORE_LABEL'
+                       description='SOCIALICONS_TEXTBEFORE_DESC'/>
+
+                <field name='textafter'
+                       type='text'
+                       default=''
+                       label='SOCIALICONS_TEXTAFTER_LABEL'
+                       description='SOCIALICONS_TEXTAFTER_DESC'/>
+
+                <field name='ordering'
+                       type='iconsorder'
+                       default=''
+                       label='SOCIALICONS_ORDERING_LABEL'
+                       description='SOCIALICONS_ORDERING_DESC'/>
+
+                <field name='target'
+                       type='list'
+                       default='_blank'
+                       label='SOCIALICONS_TARGET_LABEL'
+                       description='SOCIALICONS_TARGET_DESC'>
+                    <option value="_blank">A new window</option>
+                    <option value="_self">The same window</option>
+                </field>
+            </fieldset>
+
+            <fieldset name="advanced">
+                <field name="moduleclass_sfx"
+                       type="text"
+                       label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                       description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"/>
+
+                <field name="cache"
+                       type="list"
+                       default="1"
+                       label="COM_MODULES_FIELD_CACHING_LABEL"
+                       description="COM_MODULES_FIELD_CACHING_DESC">
+                    <option value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+
+                <field name="layout"
+                       type="modulelayout"
+                       label="JFIELD_ALT_LAYOUT_LABEL"
+                       description="JFIELD_ALT_MODULE_LAYOUT_DESC"/>
+            </fieldset>
+        </fields>
+    </config>
+
+    <updateservers>
+        <server type="extension" priority="1" name="JS Easy Social Icons">https://deploy.ostraining.com/client/update/pro/stable/mod_jssocialicons</server>
+    </updateservers>
+
+    <alledia>
+        <element>jssocialicons</element>
+        <namespace>JSSocialIcons</namespace>
+        <license>pro</license>
+        <targetplatform>3.*</targetplatform>
+        <relatedExtensions>
+            <extension type="library"
+                       element="allediaframework">AllediaFramework</extension>
+
+            <extension type="plugin"
+                       group="system"
+                       element="ossystem"
+                       publish="true"
+                       ordering="first">OSSystem</extension>
+
+            <extension type="plugin"
+                       group="system"
+                       element="osmylicensesmanager"
+                       publish="true"
+                       ordering="last">OSMyLicensesManager</extension>
+        </relatedExtensions>
+
+        <include>AllediaFreeDefaultFiles</include>
+
+        <obsolete>
+            <folder>modules/mod_jssocialicons/fields</folder>
+            <file>language/en-GB/en-GB.mod_jssocialicons.ini</file>
+        </obsolete>
+    </alledia>
+</extension>

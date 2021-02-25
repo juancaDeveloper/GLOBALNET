@@ -1,0 +1,114 @@
+/* General
+ ========================================================================== */
+
+#easy-social-icons .jssocialicons-icons {
+    display: table;
+    width: 100%;
+}
+
+#easy-social-icons .jssocialicons-after {
+    margin-top: 10px;
+}
+
+#easy-social-icons .jssocialicons-before {
+    margin-bottom: 10px;
+}
+
+#easy-social-icons ul.jssocialicons {
+    list-style: none;
+    margin: 0;
+}
+
+#easy-social-icons ul.jssocialicons-horizontal > li {
+    float: left;
+}
+
+#easy-social-icons ul.jssocialicons a,
+#easy-social-icons ul.jssocialicons a:hover,
+#easy-social-icons ul.jssocialicons a:focus {
+    text-decoration: none;
+}
+
+#easy-social-icons ul.jssocialicons > li > a {
+    display: inline-block;
+    text-align: center;
+    transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -o-transition: all 0.4s ease-in-out 0s;
+}
+
+#easy-social-icons ul.jssocialicons > li > a[class^="si-"]:before,
+#easy-social-icons ul.jssocialicons > li > a[class*=" si-"]:before {
+    font-family:FontAwesome;
+    font-weight:normal;
+    font-style:normal;
+    text-decoration:inherit;
+    -webkit-font-smoothing:antialiased;
+    *margin-right:.3em;
+}
+
+#easy-social-icons ul.jssocialicons > li > a[class^="si-"]:before,
+#easy-social-icons ul.jssocialicons > li > a[class*=" si-"]:before {
+    text-decoration:inherit;
+    display:inline-block;
+    speak:none;
+}
+
+/* Spacing
+ ========================================================================== */
+
+#easy-social-icons ul.jssocialicons > li > a.si-size-16,
+#easy-social-icons ul.jssocialicons > li > a.si-size-24 {
+    margin-right: 3px;
+    margin-bottom: 3px;
+}
+
+#easy-social-icons ul.jssocialicons > li > a.si-size-32 {
+    margin-right: 6px;
+    margin-bottom: 6px;
+}
+
+#easy-social-icons ul.jssocialicons > li > a.si-size-48,
+#easy-social-icons ul.jssocialicons > li > a.si-size-64 {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+/* Sizes
+ ========================================================================== */
+
+#easy-social-icons ul.jssocialicons > li > a.si-size-16 {
+    font-size: 9px;
+    width: 16px;
+    height: 16px;
+    line-height: 14px;
+}
+
+#easy-social-icons ul.jssocialicons > li > a.si-size-24 {
+    font-size: 16px;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+}
+
+#easy-social-icons ul.jssocialicons > li > a.si-size-32 {
+    font-size: 20px;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+}
+
+#easy-social-icons ul.jssocialicons > li > a.si-size-48 {
+    font-size: 30px;
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+}
+
+#easy-social-icons ul.jssocialicons > li > a.si-size-64 {
+    font-size: 40px;
+    width: 64px;
+    height: 64px;
+    line-height: 64px;
+}

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="2.5.0" method="upgrade">
+	<name>DJ-Tabs Package</name>
+	<packagename>dj-tabs</packagename>
+	<creationDate>August 2013</creationDate>
+	<author>DJ-Extensions.com</author>
+	<copyright>Copyright (C) 2013 DJ-Extensions.com, All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses GNU/GPL</license>
+	<authorEmail>contact@dj-extensions.com</authorEmail>
+	<authorUrl>http://dj-extensions.com</authorUrl>
+	<version>1.3.6</version>
+	<url>http://dj-extensions.com</url>
+	<packager></packager>
+	<packagerurl></packagerurl>
+	<description><![CDATA[
+		<style> #right-text {font-family:Arial, Helvetica, sans-serif;	font-size:11px;	} #right-text a:link, #right-text a:visited {color:#4991c1;font-weight:bold; font-size: 13px;} #right-text a:hover {text-decoration:underline;}	#right-text h2 {color:#fa9539;text-transform:uppercase;	font-size:16px;	padding:0;	margin:2px 0;}	#right-text p {padding:0;margin:4px 0;}	#left-logo {float:left;width:300px;height:120px;display:block;} #left-logo img {margin: 40px 20px;} #right-text {float:left;width:400px;text-align:left;}</style>
+	
+		<div id="left-logo">
+			<a target="_blank" href="http://dj-extensions.com"><img src="../administrator/components/com_djtabs/assets/logo.png" alt="DJ-Extensions.com" /></a>
+		</div>
+		
+		<div id="right-text">
+			<h2>Thank you for installing DJ-Tabs!</h2>
+			<p><a href="http://dj-extensions.com/changelog/dj-tabs/ver-1-3-6" target="_blank">Check out changelog</a></p>
+			<p>DJ-Tabs extension allows displaying grouped content including articles, multi-category articles, videos and modules from 3rd party extensions. 
+			All of this on 2 different layouts and editable custom themes.</p>
+			<p>Check out our other extensions at <a target="_blank" href="http://dj-extensions.com">DJ-Extensions.com</a></p>
+		</div>
+	
+		]]></description>
+	<updateservers>
+		<server type="extension" priority="1" name="DJ-Tabs">https://dj-extensions.com/api/getUpdateInfo?extension=djtabs.xml</server>
+	</updateservers>
+	<files>
+	        <file type="module" client="site" id="mod_djtabs">mod_djtabs.zip</file>
+	        <file type="component" client="admin" id="com_djtabs">com_djtabs.zip</file>
+	        <file type="plugin" group="editors-xtd" id="djtabs">plg_editors-xtd_djtabs.zip</file>
+			<file type="plugin" group="content" id="djtabs">plg_content_djtabs.zip</file>
+	</files>
+</extension>

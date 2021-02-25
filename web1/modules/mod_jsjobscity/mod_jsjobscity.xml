@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0"  client="site" method="upgrade">
+	<name>JS Jobs By Cities</name>
+	<author>Joom Sky</author>
+	<creationDate>jun 23, 2011</creationDate>
+	<copyright>(C) 2010. All rights reserved.</copyright>
+	<license>GNU/GPL</license>
+	<authorEmail>ahmad@joomsky.com</authorEmail>
+	<authorUrl>www.joomsky.com</authorUrl>
+	<version>1.0.0</version>
+	<description>Shows jobs by cities from js jobs database.</description>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="title" type="text" default="Job By Cities" label="Title" description="Title" />
+				<field name="showtitle" type="radio" default="1" label="Show Title" description="Show Title">
+					<option value="0">Hide</option>
+					<option value="1">Show</option>
+				</field>
+				<field name="noofjobs" type="text" default="10" label="JS_DISPLAY_MAXIMUM_JOBS_BY_CITIES" description="max record 100" />
+				<field name="schj" type="radio" default="1" label="SHOW_ONLY_CITY_HAVE_JOBS" description="Yes No city have jobs">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="colperrow" type="text" label="JS_COLUMN_PER_ROW" description="Column Per Row" />
+				<field name="Itemid" type="text" default="" label="Item Id" description="Item Id" />
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+					<field name="color1" type="color" label="TITLE_COLOR" description="LEAVE_BLANK_FOR_DEFAULT_COLOR" />
+	                <field name="color2" type="color" label="BACKGROUND_COLOR" description="LEAVE_BLANK_FOR_DEFAULT_COLOR" />
+	                <field name="color3" type="color" label="BORDER_COLOR" description="LEAVE_BLANK_FOR_DEFAULT_COLOR" />
+			</fieldset>
+		</fields>
+	</config>
+
+	<files>
+		<filename module="mod_jsjobscity">mod_jsjobscity.php</filename>
+		<filename module="mod_jsjobscity">helper.php</filename>
+		<folder module="mod_jsjobscity">tmpl</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_jsjobscity.ini</language>
+	</languages>
+</extension>
+

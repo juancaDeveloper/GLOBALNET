@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0"  client="site" method="upgrade">
+	<name>JS Jobs Package</name>
+	<author>Joom Sky</author>
+	<creationDate>April 13, 2016</creationDate>
+	<copyright>(C) 2010. All rights reserved.</copyright>
+	<license>GNU/GPL</license>
+	<authorEmail>ahmad@joomsky.com</authorEmail>
+	<authorUrl>www.joomsky.com</authorUrl>
+	<version>1.0.3</version>
+	<description>Shows Packages from JS Jobs database.</description>
+	<files>
+		<filename>mod_jsjobspackage.xml</filename>
+		<filename module="mod_jsjobspackage">mod_jsjobspackage.php</filename>
+		<filename>helper.php</filename>
+		<folder>tmpl</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="title" type="text" default="JS Jobs Packages" label="Title" description="JS_MODULE_TITLE" />
+				<field name="description" type="text" default="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et." label="Description" description="Module description" />
+				<field name="packagefor" type="list" default="1" label="Select Package" description="Select Package">
+					<option value="1">Employer Packages</option>
+					<option value="2">Job Seeker Packages </option>
+					<option value="3">Employer and Job Seeker Packages </option>
+				</field>
+				<field name="numberofpackage" type="text" default="2" label="Number of Package" description="Number of Package" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

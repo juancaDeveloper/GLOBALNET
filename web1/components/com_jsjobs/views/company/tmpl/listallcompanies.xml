@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <fields name="request">
+        <fieldset name="request">
+            <field
+                name="c"
+                type="hidden"
+                default="company"
+            />
+        </fieldset>
+    </fields>	
+    <layout title="All Companies">
+        <message>
+			<![CDATA[List all companies.]]>
+        </message>
+    </layout>
+    <state>
+        <name>All Companies</name>
+        <description>List all companies.</description>
+    </state>
+</metadata>

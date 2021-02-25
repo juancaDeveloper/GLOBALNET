@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5.0" method="upgrade" client="admin">
+	<name>com_djtabs</name>
+	<creationDate>August 2013</creationDate>
+	<author>DJ-Extensions.com</author>
+	<copyright>Copyright (C) 2013 DJ-Extensions.com, All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses GNU/GPL</license>
+	<authorEmail>contact@dj-extensions.com</authorEmail>
+	<authorUrl>http://dj-extensions.com</authorUrl>
+	<version>1.3.6</version>
+	<description>DJ-Tabs component</description>
+	<scriptfile>djtabs.script.php</scriptfile>
+	<install>
+		<sql>
+			<file charset="utf8" driver="mysql">sql/install.sql</file>
+		</sql>
+	</install>
+	<update>
+		<schemas>
+			<schemapath type="mysql">sql/updates</schemapath>
+		</schemas>
+	</update>
+	<uninstall>
+		<sql>
+			<file charset="utf8" driver="mysql">sql/uninstall.sql</file>
+		</sql>
+	</uninstall>
+	<administration>
+		<menu img="components/com_djtabs/assets/icon-16.png">COM_DJTABS</menu>
+		<submenu>
+			<menu link="option=com_djtabs&amp;view=items" alt="DJ-Tabs/Items" img="components/com_djtabs/assets/icon-16-items.png">COM_DJTABS_ITEMS</menu>
+			<menu link="option=com_djtabs&amp;view=groups" alt="DJ-Tabs/Groups" img="components/com_djtabs/assets/icon-16-category.png">COM_DJTABS_GROUPS</menu>
+			<menu link="option=com_djtabs&amp;view=themes" alt="DJ-Tabs/Themes" img="components/com_djtabs/assets/icon-16-themes.png">COM_DJTABS_THEMES</menu>
+		</submenu>
+		<files folder="administrator">
+			<filename>djtabs.php</filename>
+			<filename>controller.php</filename>
+			<filename>config.xml</filename>
+			<filename>access.xml</filename>
+			<folder>assets</folder>
+			<folder>controllers</folder>
+			<folder>language</folder>
+			<folder>lib</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+			<folder>helpers</folder>
+		</files>
+	</administration>
+	<config>
+		<fields>
+			<fieldset>
+				<field name="date" default="" />
+				<field name="title" default="" />
+				<field name="title_link" default="0" />
+				<field name="title_char_limit" default="100" />
+				<field name="image" default="1" />
+				<field name="image_link" default="1" />
+				<field name="image_width" default="" />
+				<field name="image_height" default="" />
+				<field name="description" default="1" />
+				<field name="description_link" default="0" />
+				<field name="HTML_in_description" default="1" />
+				<field name="description_char_limit" default="500" />
+				<field name="readmore_button" default="" />
+				<field name="readmore_text" default="" />
+				<field name="category" default="" />
+				<field name="category_link" default="" />
+				<field name="author" default="" />
+			</fieldset>
+		</fields>
+	</config>
+	<files folder="site">
+		<filename>djtabs.php</filename>
+		<filename>controller.php</filename>
+		<folder>assets</folder>
+		<folder>helpers</folder>
+		<folder>language</folder>
+		<folder>models</folder>
+		<folder>views</folder>
+		<folder>thumbs</folder>
+	</files>
+</extension>

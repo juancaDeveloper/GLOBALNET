@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field name="id"
+			type="text"
+			label="JGLOBAL_FIELD_ID_LABEL"
+			description="JGLOBAL_FIELD_ID_DESC"
+			size="10"
+			default="0"
+			readonly="true"
+			class="readonly param_number"
+		/>
+		
+		<field name="title"
+			type="text"
+			label="JGLOBAL_TITLE"
+			description="JGLOBAL_TITLE"
+			class="inputbox"
+			size="30"
+			required="true"
+		 />
+
+		<field id="random"
+			name="random"
+			type="list"
+			label="COM_DJTABS_FORM_RANDOM"
+			description="COM_DJTABS_FORM_RANDOM_DESC"
+			class="inputbox"
+			size="1"
+			default="1"
+		>
+			<option value="1">
+				JYES</option>
+			<option value="0">
+				JNO</option>			
+		</field>
+		
+		<field id="published"
+			name="published"
+			type="radio"
+			label="JSTATUS"
+			description="JFIELD_PUBLISHED_DESC"
+			class="btn-group"
+			size="1"
+			default="1"
+		>
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>	
+		</field>
+			
+	</fieldset>
+	
+	<fields name="params">
+		
+		<fieldset name="basic" label="COM_DJTABS_BASIC_ATTRIBUTES"
+		addfieldpath="/administrator/components/com_djtabs/models/fields/" >
+		
+		<field name="tb-hght" type="text" class="param_number" default="47" label="Tab's height" description="in pixels"/>
+		<field name="tb-wdth" type="text" class="param_number" default="134" label="Tab's width" description="in pixels or 'auto' for automatic width (tabs' width is automatically decreased if tabs don't fit)"/>
+		<field name="tb-nctv-bck-clr" type="djcolor" label="Tab color" description="" default="#302C2C"/>
+		<field name="tb-ctv-bck-clr" type="djcolor" label="Active tab color" description="" default="#308806"/>
+		<field name="tb-nctv-ttl-clr" type="djcolor" label="Tab title color" description="" default="#F7F2EB"/>	
+		<field name="tb-ctv-ttl-clr" type="djcolor" label="Active tab title color" description="" default="#F7F2EB"/>
+		<field name="pnl-nctv-clr" type="djcolor" label="Panel color" description=""/>
+		<field name="pnl-ctv-clr" type="djcolor" label="Active panel color" description=""/>
+		<field name="pnl-nctv-ttl-clr" type="djcolor" label="Panel title color" description="" default="#302C2C"/>
+		<field name="pnl-ctv-ttl-clr" type="djcolor" label="Active panel title color" description="" default="#302C2C"/>
+		
+		</fieldset>
+		
+		<fieldset name="view" label="COM_DJTABS_OTHER_ATTRIBUTES"
+		addfieldpath="/administrator/components/com_djtabs/models/fields/" >
+		
+		<field name="pnl-dt-clr" type="djcolor" default="#308806" label="Date color" description=""/>
+		<field name="pnl-nctv-brdrs-stl" type="list" label="Panel borders style" description="">
+		<option value="solid">solid</option>
+		<option value="none">none</option>
+		<option value="dotted">dotted</option>
+		<option value="dashed">dashed</option>
+		<option value="double">double</option>
+		<option value="groove">groove</option>
+		<option value="ridge">ridge</option>
+		</field>
+		<field name="pnl-ctv-brdrs-stl" type="list" label="Active panel brdrs style" description="">
+		<option value="solid">solid</option>
+		<option value="none">none</option>
+		<option value="dotted">dotted</option>
+		<option value="dashed">dashed</option>
+		<option value="double">double</option>
+		<option value="groove">groove</option>
+		<option value="ridge">ridge</option>	
+		</field>
+		<field name="pnl-nctv-brdrs-clr" type="djcolor" default="#E2E2E2" label="Panel borders color" description=""/>
+		<field name="pnl-ctv-brdrs-clr" type="djcolor" default="#E2E2E2" label="Active panel brdrs color" description=""/>
+		<field name="tgglr-nctv-bck-clr" type="djcolor" default="#E2E2E2" label="Toggler color" description=""/>
+		<field name="tgglr-ctv-bck-clr" type="djcolor" default="#308806" label="Active toggler color" description=""/>
+		<field name="tb-brdr-rds" type="text" class="param_number" size="10" default="0" label="Tab border radius" description="in pixels"/>
+		<field name="pnl-brdr-rds" type="text" class="param_number" default="0" label="Panel border radius" description="in pixels"/>
+		<field name="tgglr-brdr-rds" type="text" class="param_number" default="0" label="Toggler border radius" description="in pixels"/>
+		<field name="mg-brdr-rds" type="text" class="param_number" default="0" label="Image border radius" description="in pixels"/>
+		<field name="cntnt-clr" type="djcolor" default="#666666" label="Article content color"/>
+		
+		</fieldset>
+		<!--
+		<fieldset name="theme_main_color" label="Theme main color"
+		addfieldpath="/administrator/components/com_djtabs/models/fields/" >
+			<field name="thm-mn-clr" type="djcolor" size="10" default="#308806" 
+				label="Theme main color" description="Theme main color"/>
+		</fieldset>
+		-->
+	</fields>	
+	
+</form>

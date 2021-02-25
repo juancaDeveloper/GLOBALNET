@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config addfieldpath="/administrator/components/com_djtabs/models/fields" >
+
+		<fieldset name="article" label="COM_DJTABS_ARTICLE_OPTIONS" 
+		addfieldpath="/administrator/components/com_content/models/fields/" >
+					
+				<field name="date"
+					type="list"
+					label="COM_DJTABS_DATE"
+					description="COM_DJTABS_DATE_DESC"
+					size=""
+					default=""
+				>
+				<option value="">COM_DJTABS_USE_GLOBAL</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+				</field>
+				
+				<field name="date_position"
+					type="list"
+					label="COM_DJTABS_DATE_POSITION"
+					description="COM_DJTABS_DATE_POSITION_DESC"
+					size=""
+					default="1"
+				>
+				<option value="1">COM_DJTABS_DATE_POSITION_NEXT_TO_TITLE</option>
+				<option value="2">COM_DJTABS_DATE_POSITION_UNDER_TITLE</option>
+				</field>
+
+				<field name= "date_panel_format"
+					type="inputbox"
+					label="COM_DJTABS_DATE_PANEL_FORMAT"
+					description="COM_DJTABS_DATE_PANEL_FORMAT_DESC"
+					default="y.m.d"
+				/>
+
+				<field name= "date_format"
+					type="inputbox"
+					label="COM_DJTABS_DATE_FORMAT"
+					description="COM_DJTABS_DATE_FORMAT_DESC"
+					default="l, d F Y"
+				/>
+
+				<field name ="title"
+					type="list"
+					label="COM_DJTABS_TITLE"
+					description="COM_DJTABS_TITLE_DESC"
+					size=""
+					default="1"
+				>
+				<option value="">COM_DJTABS_USE_GLOBAL</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+				</field>	
+				
+				<field name="title_link"
+					type="list"
+					label="COM_DJTABS_TITLE_LINK"
+					description="COM_DJTABS_TITLE_LINK_DESC"
+					size=""
+					default="0"
+				>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+				</field>
+				
+				<field name= "title_char_limit"
+					type="inputbox"
+					label="COM_DJTABS_TITLE_CHAR_LIMIT"
+					description="COM_DJTABS_TITLE_CHAR_LIMIT_DESC"
+					class="param_number"
+					default="100"
+				/>	
+				<field type="djspacer" class="djtabspacer"/>
+				
+				<field name="image"
+					type="list"
+					label="COM_DJTABS_IMAGE"
+					description="COM_DJTABS_IMAGE_DESC"
+					size=""
+					default="1"
+				>
+				<option value="1">COM_DJTABS_INTRO_IMAGE</option>
+				<option value="2">COM_DJTABS_FULLTEXT_IMAGE</option>
+				<option value="3">COM_DJTABS_FIRST_CONTENT_IMAGE</option>
+				<option value="0">COM_DJTABS_NONE</option>
+				</field>
+				
+				<field name="image_position"
+					type="list"
+					label="COM_DJTABS_IMAGE_POSITION"
+					description="COM_DJTABS_IMAGE_POSITION_DESC"
+					size=""
+					default="1"
+				>
+				<option value="1">COM_DJTABS_IMAGE_POSITION_LEFT</option>
+				<option value="2">COM_DJTABS_IMAGE_POSITION_RIGHT</option>
+				<option value="3">COM_DJTABS_IMAGE_POSITION_TOP</option>
+				</field>
+				
+				<field name="image_link"
+					type="list"
+					label="COM_DJTABS_IMAGE_LINK"
+					description="COM_DJTABS_IMAGE_LINK_DESC"
+					size=""
+					default="1"
+				>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+				</field>
+				
+				<field name ="image_width"
+					type="inputbox"
+					label="COM_DJTABS_IMAGE_WIDTH"
+					description="COM_DJTABS_IMAGE_WIDTH_GLOBAL_CONFIG_DESC"
+					class="param_number"
+					default=""
+					/>	
+					
+				<field name ="image_height"
+					type="inputbox"
+					label="COM_DJTABS_IMAGE_HEIGHT"
+					description="COM_DJTABS_IMAGE_HEIGHT_GLOBAL_CONFIG_DESC"
+					class="param_number"
+					default=""
+					/>
+					
+				<field name="thumbnails"
+					type="list"
+					label="COM_DJTABS_THUMBNAILS"
+					description="COM_DJTABS_THUMBNAILS_DESC"
+					size=""
+					default="0"
+				>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+				</field>
+				
+				<field name="thumbnails_quality"
+					type="inputbox"
+					label="COM_DJTABS_THUMBNAILS_QUALITY"
+					description="COM_DJTABS_THUMBNAILS_QUALITY_DESC"
+					size=""
+					default="85"
+					class="param_number"
+				/>
+				
+				<field type="djspacer" class="djtabspacer"/>
+				
+				<field name="description"
+					type="list"
+					label="COM_DJTABS_DESCRIPTION"
+					description="COM_DJTABS_DESCRIPTION_DESC"
+					size=""
+					default="1"
+				>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+				</field>
+				
+				
+				<field name="description_link"
+					type="list"
+					label="COM_DJTABS_DESCRIPTION_LINK"
+					description="COM_DJTABS_DESCRIPTION_LINK_DESC"
+					size=""
+					default="0"
+				>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+				</field>	
+			
+				<field name="HTML_in_description"
+					type="list"
+					label="COM_DJTABS_HTML_IN_DESCRIPTION"
+					description="COM_DJTABS_HTML_IN_DESCRIPTION_DESC"
+					size=""
+					default="1"
+				>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+				</field>
+				
+				<field name ="description_char_limit"
+					type="inputbox"
+					label="COM_DJTABS_DESCRIPTION_CHAR_LIMIT"
+					description="COM_DJTABS_DESCRIPTION_CHAR_LIMIT_DESC"
+					class="param_number"
+					default="500"
+					/>	
+								
+				<field name="readmore_button"
+					type="list"
+					label="COM_DJTABS_READMORE_BUTTON"
+					description="COM_DJTABS READMORE_BUTTON_DESC"
+					size=""
+					default=""
+				>
+				<option value="">COM_DJTABS_USE_GLOBAL</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+				</field>		
+			
+				<field name="readmore_text"
+					type="inputbox"
+					label="COM_DJTABS_READMORE_TEXT"
+					description="COM_DJTABS_READMORE_TEXT_DESC"
+					size=""
+					default=""
+					/>
+					
+				<field type="djspacer" class="djtabspacer"/>
+					
+				<field name="category"
+					type="list"
+					label="COM_DJTABS_CATEGORY"
+					description="COM_DJTABS_CATEGORY_DESC"
+					size=""
+					default=""
+				>
+				<option value="">COM_DJTABS_USE_GLOBAL</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+				</field>
+				
+				
+				<field name="category_link"
+					type="list"
+					label="COM_DJTABS_CATEGORY_LINK"
+					description="COM_DJTABS_CATEGORY_LINK_DESC"
+					size=""
+					default=""
+				>
+				<option value="">COM_DJTABS_USE_GLOBAL</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+				</field>		
+			
+				<field name="author"
+					type="list"
+					label="COM_DJTABS_AUTHOR"
+					description="COM_DJTABS_AUTHOR_DESC"
+					size=""
+					default=""
+				>
+				<option value="">COM_DJTABS_USE_GLOBAL</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+				</field>		
+		</fieldset>
+		
+		<fieldset name="article_category" label="COM_DJTABS_ARTICLE_CATEGORY_OPTIONS" 
+		addfieldpath="/administrator/components/com_content/models/fields/" >
+		
+				<field name="articles_display"
+					type="list"
+					label="COM_DJTABS_ARTICLES_DISPLAY"
+					description="COM_DJTABS_ARTICLES_DISPLAY_DESC"
+					size=""
+					default="1"
+				>
+				<option value="1">COM_DJTABS_ARTICLES_DISPLAY_FIRST_OUT</option>
+				<option value="2">COM_DJTABS_ARTICLES_DISPLAY_ALL_IN</option>
+				<option value="3">COM_DJTABS_ARTICLES_DISPLAY_ALL_OUT</option>
+				</field>
+				
+				<field name ="articles_per_row"  
+					type ="inputbox"
+					label="COM_DJTABS_ARTICLES_PER_ROW"
+					description="COM_DJTABS_ARTICLES_PER_ROW_GLOBAL_DESC"
+					default="1"
+					class="param_number"
+				/>
+				
+				<field name ="articles_space"  
+					type ="inputbox"
+					label="COM_DJTABS_ARTICLES_SPACE"
+					description="COM_DJTABS_ARTICLES_SPACE_GLOBAL_DESC"
+					class="param_number"
+					default="0"
+				/>
+				
+				<field type="djspacer" class="djtabspacer"/>
+				
+				<field name="article_limit"
+					type="inputbox"
+					label="COM_DJTABS_ARTICLE_LIMIT"
+					description="COM_DJTABS_ARTICLE_LIMIT_GLOBAL_DESC"
+					class="param_number"
+				/>
+						
+				<field name="max_category_levels" 
+					type="integer" 
+					default="1" 
+					label="COM_DJTABS_MAX_CATEGORY_LEVELS" 
+					description="COM_DJTABS_MAX_CATEGORY_LEVELS_DESC" 
+					first="1" 
+					last="10" 
+					step="1" 
+				/>
+				
+				<field name="articles_min_date" 
+					type="calendar"  
+					label="COM_DJTABS_ARTICLES_MIN_DATE" 
+					description="COM_DJTABS_ARTICLES_MIN_DATE_GLOBAL_DESC"
+					format="%Y-%m-%d"
+				/>
+				<field name="articles_max_date" 
+					type="calendar"  
+					label="COM_DJTABS_ARTICLES_MAX_DATE" 
+					description="COM_DJTABS_ARTICLES_MAX_DATE_GLOBAL_DESC"
+					format="%Y-%m-%d"
+				/>
+				<field name="articles_from_last_x_days" 
+					type="inputbox"  
+					label="COM_DJTABS_ARTICLES_FROM_LAST_X_DAYS" 
+					description="COM_DJTABS_ARTICLES_FROM_LAST_X_DAYS_GLOBAL_DESC"
+					class="param_number"
+				/>
+				
+				<field type="djspacer" class="djtabspacer"/>
+				
+				<field name="articles_ordering"
+					type="list"
+					label="COM_DJTABS_ARTICLES_ORDERING"
+					description="COM_DJTABS_ARTICLES_ORDERING_DESC"
+					size=""
+					default="ordering"
+				>
+				<option value="ordering">COM_DJTABS_ARTICLES_ORDERING_ORDERING</option>
+				<option value="created">COM_DJTABS_ARTICLES_ORDERING_DATE_CREATED</option>
+				<option value="title">COM_DJTABS_ARTICLES_ORDERING_TITLE</option>
+				<option value="hits">COM_DJTABS_ARTICLES_ORDERING_HITS</option>
+				<option value="random">COM_DJTABS_ARTICLES_ORDERING_RANDOM</option>
+				</field>
+				<field name="articles_ordering_direction"
+					type="list"
+					label="COM_DJTABS_ARTICLES_ORDERING_DIRECTION"
+					description="COM_DJTABS_ARTICLES_ORDERING_DIRECTION_DESC"
+					size=""
+					default="1"
+				>
+				<option value="1">COM_DJTABS_ARTICLES_ORDERING_DIRECTION_ASCENDING</option>
+				<option value="-1">COM_DJTABS_ARTICLES_ORDERING_DIRECTION_DESCENDING</option>
+				</field>
+		</fieldset>
+		
+		<fieldset name="other" label="COM_DJTABS_OTHER_OPTIONS">
+			<field name="video_autopause"
+					type="list"
+					label="COM_DJTABS_VIDEO_AUTOPAUSE"
+					description="COM_DJTABS_VIDEO_AUTOPAUSE_DESC"
+					size=""
+					default="2"
+				>
+				<option value="1">COM_DJTABS_VIDEO_AUTOPAUSE_PLAY_PAUSE</option>
+				<option value="2">COM_DJTABS_VIDEO_AUTOPAUSE_PAUSE_ONLY</option>
+				<option value="3">COM_DJTABS_VIDEO_AUTOPAUSE_NONE</option>
+			</field>
+			<field name="accordion_display"
+					type="list"
+					label="COM_DJTABS_ACCORDION_DISPLAY"
+					description="COM_DJTABS_ACCORDION_DISPLAY_DESC"
+					size=""
+					default="1"
+				>
+				<option value="1">COM_DJTABS_ACCORDION_DISPLAY_FIRST_OUT</option>
+				<option value="2">COM_DJTABS_ACCORDION_DISPLAY_ALL_IN</option>
+			</field>
+			<field name ="rows_number"
+					type="inputbox"
+					label="COM_DJTABS_ROWS_NUMBER"
+					description="COM_DJTABS_ROWS_NUMBER_DESC_GLOBAL"
+					default="1"
+					class="param_number"
+			/>
+			<field name="tabs_trigger"
+					type="list"
+					label="COM_DJTABS_TABS_TRIGGER"
+					description="COM_DJTABS_TABS_TRIGGER_DESC"
+					size=""
+					default="1"
+				>
+				<option value="1">COM_DJTABS_TABS_TRIGGER_CLICK</option>
+				<option value="2">COM_DJTABS_TABS_TRIGGER_HOVER</option>
+			</field>
+			<field name="transition_speed"
+					type="list"
+					label="COM_DJTABS_TRANSITION_SPEED"
+					description="COM_DJTABS_TRANSITION_SPEED_DESC"
+					size=""
+					default="500"
+				>
+				<option value="700">COM_DJTABS_TRANSITION_SPEED_SLOW</option>
+				<option value="500">COM_DJTABS_TRANSITION_SPEED_NORMAL</option>
+				<option value="300">COM_DJTABS_TRANSITION_SPEED_FAST</option>
+			</field>
+			<field name="scroll_to_accordion"
+					type="list"
+					label="COM_DJTABS_SCROLL_TO_ACCORDION"
+					description="COM_DJTABS_SCROLL_TO_ACCORDION_DESC"
+					size=""
+					default="0"
+				>
+				<option value="0">JNO</option>
+				<option value="1">COM_DJTABS_SCROLL_TO_ACCORDION_MAIN</option>
+				<option value="2">COM_DJTABS_SCROLL_TO_ACCORDION_INNER</option>
+				<option value="3">COM_DJTABS_SCROLL_TO_ACCORDION_BOTH</option>
+			</field>
+			<field name="truncate_titles"
+					type="list"
+					label="COM_DJTABS_TRUNCATE_TITLES"
+					description="COM_DJTABS_TRUNCATE_TITLES_DESC"
+					size=""
+					default="1"
+				>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="wcag_script"
+					type="list"
+					label="COM_DJTABS_WCAG_SCRIPT"
+					description="COM_DJTABS_WCAG_SCRIPT_DESC"
+					size=""
+					default="1"
+				>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+		</fieldset>
+		
+		<fieldset name="permissions" label="JCONFIG_PERMISSIONS_LABEL" description="JCONFIG_PERMISSIONS_DESC">
+			<field name="rules" type="rules" label="JCONFIG_PERMISSIONS_LABEL" class="inputbox" validate="rules" filter="rules" component="com_djtabs" section="component" />
+		</fieldset>
+		
+</config>

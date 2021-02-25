@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0"  client="site" method="upgrade">
+	<name>JS Jobs By Categories</name>
+	<author>Joom Sky</author>
+	<creationDate>Dec 30, 2010</creationDate>
+	<copyright>(C) 2010. All rights reserved.</copyright>
+	<license>GNU/GPL</license>
+	<authorEmail>ahmad@joomsky.com</authorEmail>
+	<authorUrl>www.joomsky.com</authorUrl>
+	<version>1.0.0</version>
+	<description>Shows jobs by categories from js jobs database.</description>
+
+	<files>
+		<filename module="mod_jsjobcategories">mod_jsjobcategories.php</filename>
+		<filename module="mod_jsjobcategories">helper.php</filename>
+		<folder module="mod_jsjobcategories">tmpl</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="title" type="text" default="Jobs By Categories" label="JS_TITLE" description="JS_TITLE" />
+				<field name="showtitle" type="radio" default="1" label="JS_SHOW_TITLE" description="JS_SHOW_TITLE">
+					<option value="0">JS_HIDE</option>
+					<option value="1">JS_SHOW</option>
+				</field>
+				<field name="noofcategories" type="text" default="-1" label="JS_DISPLAY_MAXIMUM_CATEGORIES" description="JS_DISPLAY_MAXIMUM_NUMBER_OF_CATEGORIES_TO_SHOW" />
+				<field name="jobsincategory" type="radio" default="1" label="JS_JOBS_IN_CATEGORY" description="JS_SHOW_JOBS_IN_CATEGORY">
+					<option value="0">JS_HIDE</option>
+					<option value="1">JS_SHOW</option>
+				</field>
+				<field name="allcategories" type="radio" default="0" label="JS_ALL_CATEGORIES" description="JS_SHOW_ALL_CATEGORIES">
+					<option value="0">JS_HIDE</option>
+					<option value="1">JS_SHOW</option>
+				</field>
+				<field name="colperrow" type="text" label="JS_COLUMN_PER_ROW" description="JS_COLUMN_PER_ROW" />
+				<field name="sliding" type="radio" default="1" label="JS_SLIDING" description="JS_YES/NO_THE_SLIDING">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="slidingdirection" type="radio" default="1" label="JS_SLIDING_DIRECTION" description="JS_YES/NO_THE_SLIDING_DIRECTION">
+					<option value="0">JS_LEFT</option>
+					<option value="1">JS_UP</option>
+				</field>
+				<field name="slidingleftwidth" default="768" type="text" label="JS_TOTAL_WIDTH_SLIDING_LEFT" description="JS_WIDTH_IS_REQUIRED_WHEN_YOU_USE_THE_SLIDING_LEFT_OPTION" />
+				<field name="consecutivesliding" type="text" default="3" label="JS_CONSECTIVE_SLIDE" description="JS_CONSECTIVE_SLIDE" />
+                <field name="Itemid" type="text" default="" label="JS_ITEMID" description="JS_ITEMID_FOR_NAVIGATION" />
+                <field name="color1" type="color" label="TITLE_COLOR" description="LEAVE_BLANK_FOR_DEFAULT_COLOR" />
+                <field name="color2" type="color" label="BACKGROUND_COLOR" description="LEAVE_BLANK_FOR_DEFAULT_COLOR" />
+                <field name="color3" type="color" label="BORDER_COLOR" description="LEAVE_BLANK_FOR_DEFAULT_COLOR" />
+        	</fieldset>
+		</fields>
+	</config>
+	<languages>
+		<language tag="en-GB">en-GB.mod_jsjobcategories.ini</language>
+	</languages>	
+</extension>
+

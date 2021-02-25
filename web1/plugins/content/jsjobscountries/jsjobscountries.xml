@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="content" method="upgrade"> 
+	<name>JS Jobs By Countries</name>
+	<author>Joom Sky</author>
+	<creationDate>jun 22, 2011</creationDate>
+	<copyright>(C) 2010. All rights reserved.</copyright>
+	<license>GNU/GPL</license>
+	<authorEmail>ahmad@joomsky.com</authorEmail>
+	<authorUrl>www.joomsky.com</authorUrl>
+	<version>1.0.0</version>
+	<description> Usage {jsjobscountries}. Shows jobs by Countries from js jobs database. </description>
+
+
+	<params>
+		<param name="noofjobs" type="text" default="10" label="JS_DISPLAY_MAXIMUM_JOBS_BY_COUNTRY" description="max record 100" />
+		<param name="title" type="text" default="Jobs By Countries " label="JS_TITLE" description="Title" />
+		<param name="shtitle" type="radio" default="1" label="JS_TITLE" description="Show/Hide the title">
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+		</param>
+		<param name="scohj" type="radio" default="1" label="JS_SHOW_ONLY_COUNTRY_HAVE_JOBS" description="Yes No country have jobs">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="colperrow" type="text" label="JS_COLUMN_PER_ROW" description="Column Per Row" />
+		<param name="separator" type="radio" default="1" label="JS_SEPARATOR" description="Show/Hide the line separator">
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+		</param>
+
+	</params>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+
+				<field name="noofjobs" type="text" default="10" label="JS_DISPLAY_MAXIMUM_JOBS_BY_COUNTRY" description="max record 100" />
+				<field name="theme" type="list" default="1" label="JS_THEME" description="Select theme of this module">
+					<option value="1">JS Jobs Theme</option>
+					<option value="2">Template Theme</option>
+					<option value="0">No Theme</option>
+				</field>
+				<field name="title" type="text" default="Jobs By Countries" label="JS_TITLE" description="Title" />
+				<field name="shtitle" type="radio" default="1" label="JS_TITLE" description="Show/Hide the title">
+					<option value="0">Hide</option>
+					<option value="1">Show</option>
+				</field>
+				<field name="scohj" type="radio" default="1" label="JS_SHOW_ONLY_COUNTRY_HAVE_JOBS" description="Yes No country have jobs">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="colperrow" type="text" label="JS_COLUMN_PER_ROW" description="Column Per Row" />
+				<field name="separator" type="radio" default="1" label="JS_SEPARATOR" description="Show/Hide the line separator">
+					<option value="0">Hide</option>
+					<option value="1">Show</option>
+				</field>
+				<field name="Itemid" type="text" default="" label="Item Id" description="Item Id" />
+				<field name="color1" type="color" label="TITLE_COLOR" description="LEAVE_BLANK_FOR_DEFAULT_COLOR" />
+	                <field name="color2" type="color" label="BACKGROUND_COLOR" description="LEAVE_BLANK_FOR_DEFAULT_COLOR" />
+	                <field name="color3" type="color" label="BORDER_COLOR" description="LEAVE_BLANK_FOR_DEFAULT_COLOR" />
+			</fieldset>
+		</fields>
+	</config>
+	<files>
+		<filename plugin="jsjobscountries">jsjobscountries.php</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_content_jsjobscountries.ini</language>
+	</languages>
+</extension>

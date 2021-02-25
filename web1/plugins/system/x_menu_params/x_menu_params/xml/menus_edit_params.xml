@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="params" addfieldpath="/plugins/system/x_menu_params/x_menu_params/elements">
+    
+        <fieldset name="sjparams"  label="Sj Mega Menu: Options">
+            <field name="sjmenulayout" type="sjmegamenu" />
+            <field name="sjmegamenu" type="hidden" default="0" />
+            <field type="spacer" label="&lt;div style=&quot;font-size:12px;font-weight:bold;color:#0D9FC4;&quot;&gt;Options for this item&lt;/div&gt;" />        
+            <field name="showmenutitle" type="radio" default="1" class="btn-group" label="YT_MEGAMENU_SHOW_TITLE" description="YT_MEGAMENU_SHOW_TITLE_DESC">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="choose_icon" type="radio" default="icon" class="btn-group" label="YT_MEGAMENU_CHOOSE_ICON" description="YT_MEGAMENU_CHOOSE_DESC">
+                <option value="image">Image</option>
+                <option value="icon">Icon</option>
+            </field>
+            <field name="image_icon" type="media" label="YT_MEGAMENU_ICON_IMAGE" description="YT_MEGAMENU_ICON_IMAGE_DESC" />
+            <field name="icon" type="icon" label="YT_MEGAMENU_ICON" description="YT_MEGAMENU_ICON_DESC" />
+            <field name="xmp_showsubtitle" type="radio" class="btn-group" default="0" label="Show Sub Title" description="Show description for item">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </field>
+            <field name="xmp_description" type="textarea" default="" rows="3" filter="raw" showon="xmp_showsubtitle:1" label="Sub Title" description="Add description for item" /> 
+            <field name="xmp_showlink" type="radio" class="btn-group" default="1" label="Show Link" description=" for module type and display is mega-pinned">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </field>
+            
+            <field name="xmp_tag_id" type="text" default="" label="Item Id" description="Add id for this menu" /> 
+            <field name="xmp_tag_class" type="text" default="" label="Item Class" description="Add class for this menu (ex:col6)" /> 
+            <field name="xmp_float" type="radio" class="btn-group" default="left" label="Float Right" description="for large screen only, and level 1 only">
+                <option value="right">Yes</option>
+                <option value="left">No</option>
+            </field>                                    
+                        
+            <field type="spacer" label="&lt;div style=&quot;font-size:12px;font-weight:bold;color:#0D9FC4;&quot;&gt;Option for dropdown box&lt;/div&gt;" />  
+            <field name="backgroundtype" type="radio" default="color" class="btn-group" label="YT_MEGAMENU_BACKGROUND_TYPE" description="YT_MEGAMENU_BACKGROUND_TYPE_DESC">
+                <option value="image">YT_MEGAMENU_BACKGROUND_TYPE_IMAGE</option>
+                <option value="color">YT_MEGAMENU_BACKGROUND_TYPE_COLOR</option>
+            </field>
+            <field name="backgroundimage" type="media" default="" label="YT_MEGAMENU_BACKGROUND_IMAGE_LABEL" description="YT_MEGAMENU_BACKGROUND_IMAGE_DESC" />
+            <field name="backgroundcolor" type="color" default="#fff" label="YT_MEGAMENU_BACKGROUND_COLOR_LABEL" description="YT_MEGAMENU_BACKGROUND_COLOR_DESC" />
+        </fieldset>
+    </fields>
+</form>

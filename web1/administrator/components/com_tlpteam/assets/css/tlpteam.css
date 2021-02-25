@@ -1,0 +1,35 @@
+.icon-48-teams {
+      background-image: url(../images/l_teams.png);
+      padding-left:60px!important;
+}
+
+.icon-48-team {
+      background-image: url(../images/l_teams.png);
+      padding-left:60px!important;
+}
+
+.icon-48-skills {
+      background-image: url(../images/l_skills.png);
+      padding-left:60px!important;
+}
+
+.icon-48-skill {
+      background-image: url(../images/l_skills.png);
+      padding-left:60px!important;
+}
+
+.icon-48-settings {
+      background-image: url(../images/l_settings.png);
+      padding-left:60px!important;
+}
+
+.icon-48-setting {
+      background-image: url(../images/l_settings.png);
+      padding-left:60px!important;
+}
+
+
+
+.other-filters{
+    padding: 0 14px;
+}

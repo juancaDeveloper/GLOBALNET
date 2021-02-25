@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.9" client="site" method="upgrade">
+    <name>BW Social Share</name>
+    <author>Bernhard Woehrlin</author>
+    <authorEmail>info@netzsinn.de</authorEmail>
+    <authorUrl>www.netzsinn.de</authorUrl>
+    <creationDate>2020.03.27</creationDate>
+    <copyright>Copyright (C) 2016-2019 NetzSinn.de. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <version>1.5.5</version>
+    <description>BW Social Share Buttons for Joomla.</description>
+    <customContent />
+    <files>
+        <filename module="mod_bw_social_share">mod_bw_social_share.php</filename>
+        <filename module="mod_bw_social_share">helper.php</filename>
+        <filename module="mod_bw_social_share">index.html</filename>
+        <filename module="mod_bw_social_share">mod_bw_social_share.xml</filename>
+        <filename module="mod_bw_social_share">CHANGELOG.txt</filename>
+        <filename module="mod_bw_social_share">LICENSE.txt</filename>
+        <folder module="mod_bw_social_share">tmpl</folder>
+        <folder>css</folder>
+        <folder>js</folder>
+
+    </files>
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.mod_bw_social_share.ini</language>
+        <language tag="en-GB">en-GB/en-GB.mod_bw_social_share.sys.ini</language>
+        <language tag="de-DE">de-DE/de-DE.mod_bw_social_share.ini</language>
+        <language tag="de-DE">de-DE/de-DE.mod_bw_social_share.sys.ini</language>
+        <language tag="ja-JP">ja-JP/ja-JP.mod_bw_social_share.ini</language>
+        <language tag="ja-JP">ja-JP/ja-JP.mod_bw_social_share.sys.ini</language>
+    </languages>
+
+
+    <updateservers>
+        <server type="extension" name="mod_bw_social_share" priority="1">http://www.netzsinn.de/extensions/modules/mod_bw_social_share_update.xml</server>
+    </updateservers>
+    <config>
+        <fields name="params">
+            <fieldset name="content_settings" label="MOD_BW_SOCIAL_SHARE_CONTENT_SETTINGS">
+                <field
+                        name="social_title"
+                        type="textarea"
+                        default=""
+                        size="255"
+                        label="MOD_BW_SOCIAL_SHARE_SOCIAL_TITLE"
+                        description="MOD_BW_SOCIAL_SHARE_SOCIAL_TITLE_DESC">
+                </field>
+                <field
+                        name="social_description"
+                        type="textarea"
+                        default=""
+                        size="750"
+                        label="MOD_BW_SOCIAL_SHARE_SOCIAL_DESCRIPTION"
+                        description="MOD_BW_SOCIAL_SHARE_SOCIAL_DESCRIPTION_DESC">
+                </field>
+                <field
+                        name="social_author"
+                        type="text"
+                        default=""
+                        label="MOD_BW_SOCIAL_SHARE_SOCIAL_AUTHOR"
+                        description="MOD_BW_SOCIAL_SHARE_SOCIAL_AUTHOR_DESC">
+                </field>
+                <field
+                        name="social_img"
+                        type="text"
+                        default=""
+                        label="MOD_BW_SOCIAL_SHARE_SOCIAL_IMG"
+                        description="MOD_BW_SOCIAL_SHARE_SOCIAL_IMG_DESC">
+                </field>
+                <field
+                        name="social_path"
+                        type="text"
+                        default=""
+                        label="MOD_BW_SOCIAL_SHARE_SOCIAL_PATH"
+                        description="MOD_BW_SOCIAL_SHARE_SOCIAL_PATH_DESC">
+                </field>
+
+                <field
+                        name="box_title"
+                        type="text"
+                        default="Share this with your friends:"
+                        label="MOD_BW_SOCIAL_SHARE_BOX_TITLE"
+                        description="MOD_BW_SOCIAL_SHARE_BOX_TITLE_DESC"
+                        filter="RAW">
+                </field>
+                <field
+                        name="is_google_analytcis"
+                        class="btn-group"
+                        type="radio"
+                        label="MOD_BW_SOCIAL_SHARE_IS_GOOGLE_ANALYTICS"
+                        default="0"
+                        description="MOD_BW_SOCIAL_SHARE_IS_GOOGLE_ANALYTICS_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field
+                        name="is_just_icons"
+                        class="btn-group"
+                        type="radio"
+                        label="MOD_BW_SOCIAL_SHARE_IS_JUST_ICONS"
+                        default="0"
+                        description="MOD_BW_SOCIAL_SHARE_IS_JUST_ICONS_DESC">
+                    <option value="2">Just Large</option>
+                    <option value="1">Just Small</option>
+                    <option value="0">Default</option>
+                </field>
+                <field
+                        name="is_hide_box_title"
+                        class="btn-group"
+                        type="radio"
+                        label="MOD_BW_SOCIAL_SHARE_IS_HIDE_BOX_TITLE"
+                        default="0"
+                        description="MOD_BW_SOCIAL_SHARE_IS_HIDE_BOX_TITLE_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field
+                        name="is_debug"
+                        class="btn-group"
+                        type="radio"
+                        label="MOD_BW_SOCIAL_SHARE_IS_DEBUG"
+                        default="0"
+                        description="MOD_BW_SOCIAL_SHARE_IS_DEBUG_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+            </fieldset>
+            <fieldset name="services_settings" label="MOD_BW_SOCIAL_SHARE_SERVICES_SETTINGS">
+                <field
+                        name="is_facebook"
+                        class="btn-group"
+                        type="radio"
+                        label="MOD_BW_SOCIAL_SHARE_FACEBOOK"
+                        default="1"
+                        description="MOD_BW_SOCIAL_SHARE_FACEBOOK_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field
+                        name="facebook_button"
+                        type="text"
+                        default="facebook"
+                        label="MOD_BW_SOCIAL_SHARE_FACEBOOK_BUTTON"
+                        description="MOD_BW_SOCIAL_SHARE_FACEBOOK_BUTTON_DESC">
+                </field>
+                <field
+                        name="is_googleplus"
+                        class="btn-group"
+                        type="radio"
+                        label="MOD_BW_SOCIAL_SHARE_GOOGLEPLUS"
+                        default="0"
+                        description="MOD_BW_SOCIAL_SHARE_GOOGLEPLUS_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field
+                        name="googleplus_button"
+                        type="text"
+                        default="google+"
+                        label="MOD_BW_SOCIAL_SHARE_GOOGLEPLUS_BUTTON"
+                        description="MOD_BW_SOCIAL_SHARE_GOOGLEPLUS_BUTTON_DESC">
+                </field>
+                <field
+                        name="is_twitter"
+                        class="btn-group"
+                        type="radio"
+                        label="MOD_BW_SOCIAL_SHARE_TWITTER"
+                        default="1"
+                        description="MOD_BW_SOCIAL_SHARE_TWITTER_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field
+                        name="twitter_button"
+                        type="text"
+                        default="twitter"
+                        label="MOD_BW_SOCIAL_SHARE_TWITTER_BUTTON"
+                        description="MOD_BW_SOCIAL_SHARE_TWITTER_BUTTON_DESC">
+                </field>
+                <field
+                        name="is_pinterest"
+                        class="btn-group"
+                        type="radio"
+                        label="MOD_BW_SOCIAL_SHARE_PINTEREST"
+                        default="1"
+                        description="MOD_BW_SOCIAL_SHARE_PINTEREST_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field
+                        name="pinterest_button"
+                        type="text"
+                        default="pinterest"
+                        label="MOD_BW_SOCIAL_SHARE_PINTEREST_BUTTON"
+                        description="MOD_BW_SOCIAL_SHARE_PINTEREST_BUTTON_DESC">
+                </field>
+                <field
+                        name="is_email"
+                        class="btn-group"
+                        type="radio"
+                        label="MOD_BW_SOCIAL_SHARE_EMAIL"
+                        default="1"
+                        description="MOD_BW_SOCIAL_SHARE_EMAIL_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field
+                        name="email_button"
+                        type="text"
+                        default="email"
+                        label="MOD_BW_SOCIAL_SHARE_EMAIL_BUTTON"
+                        description="MOD_BW_SOCIAL_SHARE_EMAIL_BUTTON_DESC">
+                </field>
+                <field
+                        name="is_instagram"
+                        class="btn-group"
+                        type="radio"
+                        label="MOD_BW_SOCIAL_SHARE_INSTAGRAM"
+                        default="1"
+                        description="MOD_BW_SOCIAL_SHARE_INSTAGRAM_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field
+                        name="instagram_button"
+                        type="text"
+                        default="instagram"
+                        label="MOD_BW_SOCIAL_SHARE_INSTAGRAM_BUTTON"
+                        description="MOD_BW_SOCIAL_SHARE_INSTAGRAM_BUTTON_DESC">
+                </field>
+                <field
+                        name="is_tumblr"
+                        class="btn-group"
+                        type="radio"
+                        label="MOD_BW_SOCIAL_SHARE_TUMBLR"
+                        default="0"
+                        description="MOD_BW_SOCIAL_SHARE_TUMBLR_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field
+                        name="tumblr_button"
+                        type="text"
+                        default="tumblr"
+                        label="MOD_BW_SOCIAL_SHARE_TUMBLR_BUTTON"
+                        description="MOD_BW_SOCIAL_SHARE_TUMBLR_BUTTON_DESC">
+                </field>
+                <field
+                        name="is_linkedin"
+                        class="btn-group"
+                        type="radio"
+                        label="MOD_BW_SOCIAL_SHARE_LINKEDIN"
+                        default="0"
+                        description="MOD_BW_SOCIAL_SHARE_LINKEDIN_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field
+                        name="linkedin_button"
+                        type="text"
+                        default="Linkedin"
+                        label="MOD_BW_SOCIAL_SHARE_LINKEDIN_BUTTON"
+                        description="MOD_BW_SOCIAL_SHARE_LINKEDIN_BUTTON_DESC">
+                </field>
+                <field
+                        name="is_reddit"
+                        class="btn-group"
+                        type="radio"
+                        label="MOD_BW_SOCIAL_SHARE_REDDIT"
+                        default="0"
+                        description="MOD_BW_SOCIAL_SHARE_REDDIT_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field
+                        name="reddit_button"
+                        type="text"
+                        default="Reddit"
+                        label="MOD_BW_SOCIAL_SHARE_REDDIT_BUTTON"
+                        description="MOD_BW_SOCIAL_SHARE_REDDIT_BUTTON_DESC">
+                </field>
+                <field
+                        name="is_vk"
+                        class="btn-group"
+                        type="radio"
+                        label="MOD_BW_SOCIAL_SHARE_VK"
+                        default="0"
+                        description="MOD_BW_SOCIAL_SHARE_VK_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field
+                        name="vk_button"
+                        type="text"
+                        default="Vk.com"
+                        label="MOD_BW_SOCIAL_SHARE_VK_BUTTON"
+                        description="MOD_BW_SOCIAL_SHARE_VK_BUTTON_DESC">
+                </field>
+                <field
+                        name="is_hackernews"
+                        class="btn-group"
+                        type="radio"
+                        label="MOD_BW_SOCIAL_SHARE_HACKERNEWS"
+                        default="0"
+                        description="MOD_BW_SOCIAL_SHARE_HACKERNEWS_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field
+                        name="hackernews_button"
+                        type="text"
+                        default="Hackernews"
+                        label="MOD_BW_SOCIAL_SHARE_HACKERNEWS_BUTTON"
+                        description="MOD_BW_SOCIAL_SHARE_HACKERNEWS_BUTTON_DESC">
+                </field>
+                <field
+                        name="is_pocket"
+                        class="btn-group"
+                        type="radio"
+                        label="MOD_BW_SOCIAL_SHARE_POCKET"
+                        default="0"
+                        description="MOD_BW_SOCIAL_SHARE_POCKET_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field
+                        name="pocket_button"
+                        type="text"
+                        default="Pocket"
+                        label="MOD_BW_SOCIAL_SHARE_POCKET_BUTTON"
+                        description="MOD_BW_SOCIAL_SHARE_POCKET_BUTTON_DESC">
+                </field>
+                <field
+                        name="is_youtube"
+                        class="btn-group"
+                        type="radio"
+                        label="MOD_BW_SOCIAL_SHARE_YOUTUBE"
+                        default="0"
+                        description="MOD_BW_SOCIAL_SHARE_YOUTUBE_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field
+                        name="youtube_button"
+                        type="text"
+                        default="Youtube"
+                        label="MOD_BW_SOCIAL_SHARE_YOUTUBE_BUTTON"
+                        description="MOD_BW_SOCIAL_SHARE_YOUTUBE_BUTTON_DESC">
+                </field>
+                <field
+                        name="is_print"
+                        class="btn-group"
+                        type="radio"
+                        label="MOD_BW_SOCIAL_SHARE_PRINT"
+                        default="0"
+                        description="MOD_BW_SOCIAL_SHARE_PRINT_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field
+                        name="print_button"
+                        type="text"
+                        default="Print"
+                        label="MOD_BW_SOCIAL_SHARE_PRINT_BUTTON"
+                        description="MOD_BW_SOCIAL_SHARE_PRINT_BUTTON_DESC">
+                </field>
+                <field
+                        name="is_whatsapp"
+                        class="btn-group"
+                        type="radio"
+                        label="MOD_BW_SOCIAL_SHARE_WHATSAPP"
+                        default="0"
+                        description="MOD_BW_SOCIAL_SHARE_WHATSAPP_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field
+                        name="whatsapp_button"
+                        type="text"
+                        default="Whatsapp"
+                        label="MOD_BW_SOCIAL_SHARE_WHATSAPP_BUTTON"
+                        description="MOD_BW_SOCIAL_SHARE_WHATSAPP_BUTTON_DESC">
+                </field>
+                <field
+                        name="is_xing"
+                        class="btn-group"
+                        type="radio"
+                        label="MOD_BW_SOCIAL_SHARE_XING"
+                        default="0"
+                        description="MOD_BW_SOCIAL_SHARE_XING_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field
+                        name="xing_button"
+                        type="text"
+                        default="XING"
+                        label="MOD_BW_SOCIAL_SHARE_XING_BUTTON"
+                        description="MOD_BW_SOCIAL_SHARE_XING_BUTTON_DESC">
+                </field>
+                <field
+                        name="is_telegram"
+                        class="btn-group"
+                        type="radio"
+                        label="MOD_BW_SOCIAL_SHARE_TELEGRAM"
+                        default="0"
+                        description="MOD_BW_SOCIAL_SHARE_TELEGRAM_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field
+                        name="telegram_button"
+                        type="text"
+                        default="Telegram"
+                        label="MOD_BW_SOCIAL_SHARE_TELEGRAM_BUTTON"
+                        description="MOD_BW_SOCIAL_SHARE_TELEGRAM_BUTTON_DESC">
+                </field>
+
+
+            </fieldset>
+            <fieldset name="advanced">
+                <field
+                        name="layout"
+                        type="modulelayout"
+                        label="JFIELD_ALT_LAYOUT_LABEL"
+                        description="JFIELD_ALT_MODULE_LAYOUT_DESC"
+                />
+
+                <field
+                        name="moduleclass_sfx"
+                        type="textarea"
+                        label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                        description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"
+                        rows="3"
+                />
+
+                <field
+                        name="cache"
+                        type="list"
+                        label="COM_MODULES_FIELD_CACHING_LABEL"
+                        description="COM_MODULES_FIELD_CACHING_DESC"
+                        default="1"
+                        filter="integer"
+                >
+                    <option value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+
+                <field
+                        name="cache_time"
+                        type="number"
+                        label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+                        description="COM_MODULES_FIELD_CACHE_TIME_DESC"
+                        default="900"
+                        filter="integer"
+                />
+
+                <field
+                        name="cachemode"
+                        type="hidden"
+                        default="static"
+                >
+                    <option value="static"></option>
+                </field>
+            </fieldset>
+        </fields>
+
+    </config>
+</extension>

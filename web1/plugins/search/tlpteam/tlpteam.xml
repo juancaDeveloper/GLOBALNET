@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="search">
+    <name>plg_search_tlpteam</name>
+    <author>TechLabPro</author>
+    <creationDate>2015-09-16</creationDate>
+    <copyright>Copyright (C) 2013. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>techlabpro@gmail.com</authorEmail>
+    <authorUrl>http://www.techlabpro.com</authorUrl>
+    <version>1.0</version>
+    <description>PLG_SEARCH_COM_TLPTEAM_XML_DESCRIPTION</description>
+    <files>
+        <filename plugin="tlpteam">tlpteam.php</filename>
+        <filename>index.html</filename>
+    </files>
+    <languages folder="../../../languages/site/search/tlpteam">
+        
+			<language tag="en-GB">../../../languages/plugins/search/tlpteam/en-GB/en-GB.plg_search_tlpteam.ini</language>
+			<language tag="en-GB">../../../languages/plugins/search/tlpteam/en-GB/en-GB.plg_search_tlpteam.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+
+            <fieldset name="basic">
+                <field name="search_limit" type="text" default="50" size="5"
+                       description="PLG_SEARCH_COM_TLPTEAM_FIELD_SEARCHLIMIT_DESC"
+                       label="PLG_SEARCH_COM_TLPTEAM_FIELD_SEARCHLIMIT_LABEL" />
+            </fieldset>
+
+        </fields>
+    </config>
+</extension>

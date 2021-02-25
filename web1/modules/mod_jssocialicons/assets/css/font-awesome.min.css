@@ -1,0 +1,25 @@
+/*!
+ *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ *  Note: we have ours in the "font" (singular) folder rather than "fonts" (plural), which is the default font-awesome folder structure.
+ */@font-face{font-family:'FontAwesome';src:url('../font/fontawesome-webfont.eot?v=4.7.0');src:url('../font/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'),url('../font/fontawesome-webfont.woff2?v=4.7.0') format('woff2'),url('../font/fontawesome-webfont.woff?v=4.7.0') format('woff'),url('../font/fontawesome-webfont.ttf?v=4.7.0') format('truetype'),url('../font/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');font-weight:normal;font-style:normal}
+
+.si-delicious:before{content:"\f1a5";}
+.si-digg:before{content:"\f1a6";}
+.si-dribbble:before{content:"\f17d";}
+.si-facebook:before{content:"\f09a";}
+.si-flickr:before{content:"\f16e";}
+.si-foursquare:before{content:"\f180";}
+.si-google-plus:before{content:"\f0d5";}
+.si-instagram:before{content:"\f16d";}
+.si-lastfm:before{content:"\f202";}
+.si-linkedin:before{content:"\f0e1";}
+.si-meetup:before{content:"\f2e0";}
+.si-pinterest:before{content:"\f0d2";}
+.si-stumbleupon:before{content:"\f1a4";}
+.si-tumblr:before{content:"\f173";}
+.si-twitter:before{content:"\f099";}
+.si-vimeo:before{content:"\f27d";}
+.si-vine:before{content:"\f1ca";}
+.si-youtube:before{content:"\f167";}
+.si-yelp:before{content:"\f1e9";}

@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" method="upgrade" client="site">
+    <name>TLP Team PRO</name>
+    <creationDate>2015-10-03</creationDate>
+    <copyright>Copyright (C) 2013. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <author>TechLabPro</author>
+    <authorEmail>techlabpro@gmail.com</authorEmail>
+    <authorUrl>http://www.techlabpro.com</authorUrl>
+    <version>2.4</version>
+    <description>MOD_TLPTEAM_DESCRIPTION</description>
+    
+    <files>
+        <filename module="mod_tlpteam">mod_tlpteam.php</filename>
+        <filename>helper.php</filename>
+        <filename>index.html</filename>
+        <folder>tmpl</folder>
+    </files>
+    <languages folder="../../languages/modules/mod_tlpteam">
+        
+			<language tag="en-GB">en-GB/en-GB.mod_tlpteam.ini</language>
+			<language tag="en-GB">en-GB/en-GB.mod_tlpteam.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+           <fieldset name="basic">
+                <field 
+                    name="mod_pretext" 
+                    type="textarea" 
+                    default="" 
+                    label="MOD_TLPTEAM_LABEL_PRETEXT" 
+                    description="MOD_TLPTEAM_DESC_PRETEXT">
+                </field>
+                      <field name="mod_layout" type="list" default="layout1" label="MOD_TLPTEAM_LABEL_LAYOUT" description="MOD_TLPTEAM_DESC_LAYOUT">
+                      <option value="">JGLOBAL_USE_GLOBAL</option>
+                      <option value="layout1">Layout 1</option>
+                      <option value="layout2">Layout 2</option>
+                      <option value="layout3">Layout 3</option>
+                      <option value="layout4">Layout 4</option>
+                      <option value="layout5">Table</option>
+                      <option value="layout6">Layout 6</option>
+                      <option value="layout7">Layout 7</option>
+                      <option value="layout8">Layout 8</option>
+                      <option value="layout9">Layout 9</option>
+                      <option value="layout10">Layout 10</option>
+                      <option value="layout11">Layout 11</option>
+                      <option value="layout12">Layout 12</option>
+                      <option value="layout13">Layout 13</option>
+                      <option value="layout14">Layout 14</option>
+                      <option value="isotope1">Isotope 1</option>
+                      <option value="isotope2">Isotope 2</option>
+                      <option value="isotope3">Isotope 3</option>
+                      <option value="isotope4">Isotope 4</option>
+                      <option value="isotope5">Isotope 5</option>
+                      <option value="isotope6">Isotope 6</option>
+                      <option value="isotope7">Isotope 7</option>
+                      <option value="isotope8">Isotope 8</option>
+                      <option value="isotope9">Isotope 9</option>
+                      <option value="carousel1">Carousel Slider 1</option>
+                      <option value="carousel2">Carousel Slider 2</option>
+                      <option value="carousel3">Carousel Slider 3</option>
+                      <option value="carousel4">Carousel Slider 4</option>
+                      <option value="carousel5">Carousel Slider 5</option>
+                      <option value="carousel6">Carousel Slider 6</option>
+                      <option value="carousel7">Carousel Slider 7</option>
+                      <option value="carousel8">Carousel Slider 8</option>
+                      <option value="carousel9">Carousel Slider 9</option>
+                      <option value="carousel10">Carousel Slider 10</option>
+                      <option value="carousel11">Carousel Slider 11</option>
+                      <option value="speciallayout01">Special Layout 01</option>
+                </field>
+                <field name="mod_layout2_image_area" showon="mod_layout:layout2[OR]mod_layout:speciallayout01" type="list" default="3" label="MOD_TLPTEAM_LABEL_LAYOUT2_IMAGEAREA" description="MOD_TLPTEAM_DESC_LAYOUT2_IMAGEAREA" >
+                      <option value="2">2 Grid</option>
+                      <option value="3">3 Grid</option>
+                      <option value="4">4 Grid</option>
+                      <option value="5">5 Grid</option>
+                      <option value="6">6 Grid</option>
+                      <option value="7">7 Grid</option>
+                </field>
+                <field name="category"
+                     type="Category"
+                     extension="com_tlpteam"
+                     label="MOD_TLPTEAM_LABEL_TEAM_CATEGORY"
+                     description="MOD_TLPTEAM_DESC_TEAM_CATEGORY" multiple = "multiple">
+                        <option value="">MOD_TLPTEAM_LABEL_TEAM_CATEGORY_OPTION</option>
+                </field>
+                <field name="hide_showall" showon="mod_layout:isotope1[OR]mod_layout:isotope2[OR]mod_layout:isotope3[OR]mod_layout:isotope4[OR]mod_layout:isotope5[OR]mod_layout:isotope6[OR]mod_layout:isotope7[OR]mod_layout:isotope8[OR]mod_layout:isotope9" type="checkbox" label="Hide Show All Button" description="Check if you want to hide show all button" value="1" default="0" />
+                
+                <field name="mod_selected_category" showon="hide_showall:1"
+                       type="Category"
+                       extension="com_tlpteam"
+                       label="Select a Category"
+                       description="Select one category">
+                       <option value="">Select Category</option>
+                  </field>
+                <field
+                      name="member"
+                      type="sql"
+                      default=""
+                      label="Select Member(s)"
+                      description="Select specific member or members to display"
+                      query="SELECT id, name FROM #__tlpteam_team"
+                      key_field="id"
+                      value_field="name"
+                      multiple="true" 
+                  />
+                <field name="mod_short_description_limit" type="text"
+                      label="MOD_TLPTEAM_FORM_LBL_SHORT_DESCRIPRION_LIMIT"
+                      description="MOD_TLPTEAM_FORM_DESC_SHORT_DESCRIPTION_LIMIT" 
+                      default="150"  />
+                <field name="mod_item_to_item_margin" type="radio" class="btn-group btn-group-yesno" 
+                      label="MOD_TLPTEAM_FORM_LBL_ITEMTOITEM_MARGIN"
+                      description="MOD_TLPTEAM_FORM_DESC_ITEMTOITEM_MARGIN" default="" >
+                        <option value="">JGLOBAL_USE_GLOBAL</option>
+                        <option value="1">Bootstrap(default)</option>
+                        <option value="0">No Margin</option>
+                </field>
+                <field name="mod_gutter" type="text" showon="mod_item_to_item_margin:1" 
+                  label="MOD_TLPTEAM_FORM_LBL_GUTTER"
+                  description="MOD_TLPTEAM_FORM_DESC_GUTTER" >
+                  
+            </field> 
+                <field name="mod_image_style" type="radio" class="btn-group btn-group-yesno"
+                      label="MOD_TLPTEAM_FORM_LBL_IMAGE_STYLE"
+                      description="MOD_TLPTEAM_FORM_DESC_IMAGE_STYLE" 
+                      default="1">
+                        <option value="">JGLOBAL_USE_GLOBAL</option>
+                        <option value="1">Square</option>
+                        <option value="2">Rounded</option>
+                </field>
+                <field name="mod_gray_scale" type="radio" class="btn-group btn-group-yesno"
+                      label="MOD_TLPTEAM_FORM_LBL_GRAYSCALE"
+                      description="MOD_TLPTEAM_FORM_DESC_GRAYSCALE" 
+                      default="0">
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                </field>     
+                <field 
+                    name="mod_membercount" 
+                    type="text" 
+                    default="5" 
+                    label="MOD_TLPTEAM_LABEL_TOTAL_MEMBER_COUNT" 
+                    description="MOD_TLPTEAM_DESC_TOTAL_MEMBER_COUNT">
+                </field>
+                <field name="mod_showno" type="list"              
+                      label="MOD_TLPTEAM_LABEL_VISIBLE_COUNT"
+                      description="MOD_TLPTEAM_DESC_VISIBLE_COUNT" 
+                      default="4" menu_published="0" filter="raw">
+                          <option value="">JGLOBAL_USE_GLOBAL</option>
+                          <option value="1">1 Per Row</option>
+                          <option value="2">2 Per Row</option>
+                          <option value="3">3 Per Row</option>
+                          <option value="4">4 Per Row</option>
+                          <option value="6">6 Per Row</option>
+                </field>
+                <field name="mod_display_no_tab" type="list"              
+                  label="MOD_TLPTEAM_FORM_LBL_DISPLAY_NO_TAB"
+                  description="COM_TLPTEAM_FORM_DESC_DISPLAY_NO_TAB" 
+                  default="3" menu_published="0" filter="raw">
+                      <option value="1">1 Per Row</option>
+                      <option value="2">2 Per Row</option>
+                      <option value="3">3 Per Row</option>
+                      <option value="4">4 Per Row</option>
+                      <option value="6">6 Per Row</option>
+                </field>
+                <field name="mod_display_no_mob" type="list"              
+                      label="MOD_TLPTEAM_FORM_LBL_DISPLAY_NO_MOB"
+                      description="COM_TLPTEAM_FORM_DESC_DISPLAY_NO_MOB" 
+                      default="1" menu_published="0" filter="raw">
+                          <option value="1">1 Per Row</option>
+                          <option value="2">2 Per Row</option>
+                          <option value="3">3 Per Row</option>
+                          <option value="4">4 Per Row</option>
+                          <option value="6">6 Per Row</option>
+                </field>
+                <field name="mod_link_detail" type="radio" class="btn-group btn-group-yesno"
+                  label="MOD_TLPTEAM_FORM_LBL_LINK_DETAIL"
+                  description="MOD_TLPTEAM_FORM_DESC_LINK_DETAIL" default="1" >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+                <field name="mod_link_type" type="radio" showon="mod_link_detail:1" class="btn-group btn-group-yesno"
+                      label="MOD_TLPTEAM_FORM_LBL_LINK_TYPE"
+                      description="MOD_TLPTEAM_FORM_DESC_LINK_TYPE" default="1" >
+                        <option value="1">Detail Page</option>
+                        <option value="2">POPUP</option>
+                </field>
+                <field name="mod_teammenuitem" type="menuitem" default="45" label="MOD_TLPTEAM_LABEL_ENABLE_MENUITEM" description="MOD_TLPTEAM_DESC_ENABLE_MENUITEM" />
+
+                <field name="mod_orderby" type="list"
+                  label="Order By"
+                  description="Please select order by" default="ordering" >
+                    <option value="ordering">Ordering</option>
+                    <option value="name">Name</option>
+                    <option value="id">ID</option>
+                    <option value="rand">Random</option>
+                </field>
+                <field name="mod_order" type="list"
+                  label="Order"
+                  description="Please select order" default="asc" >
+                    <option value="asc">Ascending</option>
+                    <option value="desc">Desending</option>
+                </field>
+            </fieldset>
+
+            <fieldset name="fieldcontrol" label="MOD_TLPTEAM_FIELD_CONTROL">
+                <field 
+                    name="mod_name_field" 
+                    type="radio" 
+                    default="1" class="btn-group btn-group-yesno" label="MOD_TLPTEAM_LABEL_SHOW_NAME" description="MOD_TLPTEAM_DESC_SHOW_NAME">
+                        <option value="">JGLOBAL_USE_GLOBAL</option>
+                        <option value="1">JSHOW</option>
+                        <option value="0">JHIDE</option>
+                </field>
+                <field 
+                    name="mod_position_field" 
+                    type="radio" 
+                    default="1" class="btn-group btn-group-yesno" label="MOD_TLPTEAM_LABEL_SHOW_POSITION" description="MOD_TLPTEAM_LABEL_SHOW_POSITION">
+                        <option value="">JGLOBAL_USE_GLOBAL</option>
+                        <option value="1">JSHOW</option>
+                        <option value="0">JHIDE</option>
+                </field>
+                 <field 
+                    name="mod_shortbio_field" 
+                    type="radio" 
+                    default="1" class="btn-group btn-group-yesno" label="MOD_TLPTEAM_LABEL_SHOW_SHORT_DESCRIPTION" description="MOD_TLPTEAM_DESC_SHORT_DESCRIPTION">
+                        <option value="">JGLOBAL_USE_GLOBAL</option>
+                        <option value="1">JSHOW</option>
+                        <option value="0">JHIDE</option>
+                </field>
+               
+                <field name="mod_email_field" type="radio" class="btn-group btn-group-yesno"
+                      label="MOD_TLPTEAM_FORM_LBL_EMAIL_FIELD"
+                      description="MOD_TLPTEAM_FORM_DESC_EMAIL_FIELD" default="1" >
+                        <option value="">JGLOBAL_USE_GLOBAL</option>
+                        <option value="1">JSHOW</option>
+                        <option value="0">JHIDE</option>
+                </field>  
+                <field name="mod_phoneno_field" type="radio" class="btn-group btn-group-yesno"
+                      label="MOD_TLPTEAM_FORM_LBL_PHONENO_FIELD"
+                      description="MOD_TLPTEAM_FORM_DESC_PHONENO_FIELD" default="1" >
+                        <option value="">JGLOBAL_USE_GLOBAL</option>
+                        <option value="1">JSHOW</option>
+                        <option value="0">JHIDE</option>
+                </field> 
+                <field name="mod_mobileno_field" type="radio" class="btn-group btn-group-yesno"
+                      label="MOD_TLPTEAM_FORM_LBL_MOBILENO_FIELD"
+                      description="MOD_TLPTEAM_FORM_DESC_MOBILENO_FIELD" default="1" >
+                        <option value="">JGLOBAL_USE_GLOBAL</option>
+                        <option value="1">JSHOW</option>
+                        <option value="0">JHIDE</option>
+                </field>  
+                <field name="mod_website_field" type="radio" class="btn-group btn-group-yesno"
+                      label="MOD_TLPTEAM_FORM_LBL_WEBSITE_FIELD"
+                      description="MOD_TLPTEAM_FORM_DESC_WEBSITE_FIELD" default="1" >
+                        <option value="">JGLOBAL_USE_GLOBAL</option>
+                        <option value="1">JSHOW</option>
+                        <option value="0">JHIDE</option>
+                </field>  
+                <field name="mod_location_field" type="radio" class="btn-group btn-group-yesno"
+                      label="MOD_TLPTEAM_FORM_LBL_LOCATION_FIELD"
+                      description="MOD_TLPTEAM_FORM_DESC_LOCATION_FIELD" default="1" >
+                        <option value="">JGLOBAL_USE_GLOBAL</option>
+                        <option value="1">JSHOW</option>
+                        <option value="0">JHIDE</option>
+                </field>  
+                <field 
+                    name="mod_skill_field" 
+                    type="radio" 
+                    default="1" class="btn-group btn-group-yesno" label="MOD_TLPTEAM_LABEL_SKILL" description="MOD_TLPTEAM_DESC_SKILL">
+                        <option value="">JGLOBAL_USE_GLOBAL</option>
+                        <option value="1">JSHOW</option>
+                        <option value="0">JHIDE</option>
+                </field>
+                <field 
+                    name="mod_socialicon_field" 
+                    type="radio" 
+                    default="1" class="btn-group btn-group-yesno" label="MOD_TLPTEAM_LABEL_SOCIAL_ICON" description="MOD_TLPTEAM_DESC_SOCIAL_ICON">
+                        <option value="">JGLOBAL_USE_GLOBAL</option>
+                        <option value="1">JSHOW</option>
+                        <option value="0">JHIDE</option>
+                </field>
+
+                 <field 
+                    name="mod_enablejquery" 
+                    type="radio" 
+                    default="1" class="btn-group btn-group-yesno" label="MOD_TLPTEAM_LABEL_ENABLE_JQUERY" description="MOD_TLPTEAM_DESC_ENABLE_JQUERY">
+                        <option value="">JGLOBAL_USE_GLOBAL</option>
+                        <option value="1">JSHOW</option>
+                        <option value="0">JHIDE</option>
+                </field>
+                <field name="mod_teammenuitem" type="menuitem" default="45" label="MOD_TLPTEAM_LABEL_ENABLE_MENUITEM" description="MOD_TLPTEAM_DESC_ENABLE_MENUITEM" />
+            </fieldset>
+
+            <fieldset name="style" label="MOD_TLPTEAM_STYLE_LABEL">
+                <field name="mod_primary_color" type="color" default=""
+                      label="MOD_TLPTEAM_FORM_LBL_PRIMARY_COLOR"
+                      description="MOD_TLPTEAM_FORM_DESC_PRIMARY_COLOR" />
+                 <field name="mod_overlay_item_padding" type="text"
+                        label="MOD_TLPTEAM_FORM_LBL_OVERLAY_ITEM_PADDING"
+                        description="MOD_TLPTEAM_FORM_DESC_OVERLAY_ITEM_PADDING" 
+                        default="15"  /> 
+                <field name="mod_overlay_color" type="color" default=""
+                      label="MOD_TLPTEAM_FORM_LBL_OVERLAY_COLOR"
+                      description="MOD_TLPTEAM_FORM_DESC_OVERLAY_COLOR" />
+                <field name="mod_overlay_opacity" type="list"              
+                      label="MOD_TLPTEAM_FORM_LBL_OVERLAY_OPACITY"
+                      description="MOD_TLPTEAM_FORM_DESC_DISPLAY_NO" 
+                      default="4" menu_published="0" filter="raw">
+                          <option value="">JGLOBAL_USE_GLOBAL</option>
+                          <option value=".1">10%</option>
+                          <option value=".2">20%</option>
+                          <option value=".3">30%</option>
+                          <option value=".4">40%</option>
+                          <option value=".5">50%</option>
+                          <option value=".6">60%</option>
+                          <option value=".7">70%</option>
+                          <option value=".8">80%</option>
+                          <option value=".9">90%</option>
+                </field>
+                <field name="mod_name_font_size" type="text"
+                      label="MOD_TLPTEAM_FORM_LBL_NAME_FONT_SIZE"
+                      description="MOD_TLPTEAM_FORM_DESC_NAME_FONT_SIZE" 
+                      default="18" />
+                <field name="mod_name_font_color" type="color" default=""
+                      label="MOD_TLPTEAM_FORM_LBL_NAME_FONT_COLOR"
+                      description="MOD_TLPTEAM_FORM_DESC_NAME_FONT_COLOR" />
+                <field name="mod_name_text_align" type="list"
+                      label="MOD_TLPTEAM_FORM_LBL_NAME_TEXT_ALIGN"
+                      description="MOD_TLPTEAM_FORM_DESC_NAME_TEXT_ALIGN" 
+                      default="">
+                        <option value="">JGLOBAL_USE_GLOBAL</option>
+                        <option value="left">Left</option>
+                        <option value="right">Right</option>
+                        <option value="center">Center</option>
+                </field>
+                
+                <field name="mod_position_font_size" type="text"
+                      label="MOD_TLPTEAM_FORM_LBL_POSITION_FONT_SIZE"
+                      description="MOD_TLPTEAM_FORM_DESC_POSITION_FONT_SIZE" 
+                      default="14" />
+                <field name="mod_position_font_color" type="color" default=""
+                      label="MOD_TLPTEAM_FORM_LBL_POSITION_FONT_COLOR"
+                      description="MOD_TLPTEAM_FORM_DESC_POSITION_FONT_COLOR" />
+                <field name="mod_position_text_align" type="list"
+                      label="MOD_TLPTEAM_FORM_LBL_POSITION_TEXT_ALIGN"
+                      description="MOD_TLPTEAM_FORM_DESC_POSITION_TEXT_ALIGN" 
+                      default="">
+                        <option value="">JGLOBAL_USE_GLOBAL</option>
+                        <option value="center">Center</option>
+                        <option value="left">Left</option>
+                        <option value="right">Right</option>
+                </field>     
+                <field name="mod_short_bio_font_color" type="color" default=""
+                      label="MOD_TLPTEAM_FORM_LBL_SHORT_BIO_FONT_COLOR"
+                      description="MOD_TLPTEAM_FORM_DESC_SHORT_BIO_FONT_COLOR" />      
+                <field name="mod_short_bio_text_align" type="list"
+                      label="MOD_TLPTEAM_FORM_LBL_SHORT_BIO_TEXT_ALIGN"
+                      description="MOD_TLPTEAM_FORM_DESC_SHORT_BIO_TEXT_ALIGN" 
+                      default="">
+                        <option value="">JGLOBAL_USE_GLOBAL</option>
+                        <option value="left">Left</option>
+                        <option value="right">Right</option>
+                        <option value="center">Center</option>
+                        <option value="justify">Justify</option>
+                </field>       
+                <field name="mod_social_icon_background" type="color" default=""
+                      label="MOD_TLPTEAM_FORM_LBL_SOCIAL_ICON_BACKGROUND"
+                      description="MOD_TLPTEAM_FORM_DESC_SOCIAL_ICON_BACKGROUND" />
+                <field name="mod_social_icon_color" type="color" default=""
+                      label="MOD_TLPTEAM_FORM_LBL_SOCIAL_ICON_COLOR"
+                      description="MOD_TLPTEAM_FORM_DESC_SOCIAL_ICON_COLOR" />
+                <field name="mod_social_icon_size" type="text"
+                      label="MOD_TLPTEAM_FORM_LBL_SOCIAL_ICON_SIZE"
+                      description="MOD_TLPTEAM_FORM_DESC_SOCIAL_ICON_SIZE" 
+                      default="16" />
+                <field name="mod_btn_bg" type="color" default=""
+                      label="MOD_TLPTEAM_FORM_LBL_BTN_BG"
+                      description="MOD_TLPTEAM_FORM_DESC_BTN_BG" />
+                <field name="mod_btn_text_color" type="color" default=""
+                      label="MOD_TLPTEAM_FORM_LBL_BTN_TEXT_COLOR"
+                      description="MOD_TLPTEAM_FORM_DESC_BTN_TEXT_COLOR" />
+                <field name="mod_btn_bg_hover" type="color" default=""
+                      label="MOD_TLPTEAM_FORM_LBL_BTN_BG_HOVER"
+                      description="MOD_TLPTEAM_FORM_DESC_BTN_BG_HOVER" />
+            </fieldset>   
+
+            <fieldset name="carpusel" label="MOD_TLPTEAM_LABEL_CAROUSEL">        
+                 <field 
+                    name="@spacer" 
+                    type="spacer" 
+                    default="" 
+                    label="" 
+                    description="">
+                </field>
+                <field 
+                    name="mod_speed" 
+                    type="text" 
+                    default="200" 
+                    label="MOD_TLPTEAM_LABEL_SLIDER_SPEED" 
+                    description="MOD_TLPTEAM_DESC_SLIDER_SPEED">
+                </field>
+                <field name="mod_autoplay" type="radio" default="true" class="btn-group btn-group-yesno" label="MOD_TLPTEAM_LABEL_AUTO_PLAY" description="MOD_TLPTEAM_DESC_AUTO_PLAY">
+                      <option value="true">True</option>
+                      <option value="false">False</option>
+                </field>
+                
+                <field name="mod_navigation" type="radio" default="true" class="btn-group btn-group-yesno" label="MOD_TLPTEAM_LABEL_NAVIGATION" description="MOD_TLPTEAM_DESC_NAVIGATION">
+                        <option value="true">JSHOW</option>
+                        <option value="false">JHIDE</option>
+                </field>
+                
+                <field name="mod_pagination" type="radio" default="false" class="btn-group btn-group-yesno" label="MOD_TLPTEAM_LABEL_PAGINATION" description="MOD_TLPTEAM_DESC_PAGINATION">
+                        <option value="true">JSHOW</option>
+                        <option value="false">JHIDE</option>
+                </field>
+                
+                <field name="mod_responsive" type="radio" default="true" class="btn-group btn-group-yesno" label="MOD_TLPTEAM_LABEL_RESPONSIVE" description="MOD_TLPTEAM_DESC_RESPONSIVE">
+                        <option value="true">True</option>
+                        <option value="false">False</option>
+                </field>
+                <field name="mod_lazyload" type="radio" default="true" class="btn-group btn-group-yesno" label="MOD_TLPTEAM_LABEL_LAZYLOAD" description="MOD_TLPTEAM_DESC_LAZYLOAD">
+                        <option value="true">True</option>
+                        <option value="false">False</option>
+                </field>
+                <field name="mod_loop_enable" type="radio" class="btn-group btn-group-yesno"
+                  label="MOD_TLPTEAM_LBL_LOOP"
+                  description="MOD_TLPTEAM_DESC_LOOP" 
+                  default="true">
+                    <option value="true">True</option>
+                    <option value="false">False</option>
+                </field>
+                <field name="mod_rtl_enable" type="radio" class="btn-group btn-group-yesno"
+                  label="MOD_TLPTEAM_LBL_RTL"
+                  description="MOD_TLPTEAM_DESC_RTL" 
+                  default="false">
+                    <option value="true">True</option>
+                    <option value="false">False</option>
+                </field>
+            </fieldset> 
+            <fieldset
+              name="advanced">
+              <field
+                  name="moduleclass_sfx"
+                  type="textarea" rows="3"
+                  label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                  description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+              <field
+                  name="cache"
+                  type="list"
+                  default="0"
+                  label="COM_MODULES_FIELD_CACHING_LABEL"
+                  description="COM_MODULES_FIELD_CACHING_DESC">
+                  <option
+                      value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+              </field>
+          </fieldset> 
+            
+        </fields>
+    </config>
+</extension>

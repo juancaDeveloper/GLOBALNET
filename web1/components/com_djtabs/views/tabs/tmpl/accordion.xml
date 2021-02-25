@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_DJTABS_ACCORDION_VIEW"></layout>
+	<fields name="params">		
+		<fieldset name="basic" label="COM_DJTABS_ACCORDION_OPTIONS"
+			addfieldpath="/administrator/components/com_djtabs/models/fields" >
+			<field 
+				name="group_id" 
+				type="sql" 
+				default="0"  
+				key_field="id" 
+				value_field="title" 
+				label="COM_DJTABS_SELECT_GROUP" 
+				query="SELECT id, title FROM #__djtabs_groups"
+				required="true"
+			/>
+			<field 
+				name="theme"
+				type="djtheme" 
+				label="COM_DJTABS_SELECT_THEME"
+				required="true"
+			/>				
+			<field name="video_autopause"
+					type="list"
+					label="COM_DJTABS_VIDEO_AUTOPAUSE"
+					description="COM_DJTABS_VIDEO_AUTOPAUSE_DESC"
+					size=""
+					default=""
+				>
+				<option value="">COM_DJTABS_USE_GLOBAL</option>
+				<option value="1">COM_DJTABS_VIDEO_AUTOPAUSE_PLAY_PAUSE</option>
+				<option value="2">COM_DJTABS_VIDEO_AUTOPAUSE_PAUSE_ONLY</option>
+				<option value="3">COM_DJTABS_VIDEO_AUTOPAUSE_NONE</option>
+			</field>
+			<field name="accordion_display"
+					type="list"
+					label="COM_DJTABS_ACCORDION_DISPLAY"
+					description="COM_DJTABS_ACCORDION_DISPLAY_DESC"
+					size=""
+					default=""
+				>
+				<option value="">COM_DJTABS_USE_GLOBAL</option>
+				<option value="1">COM_DJTABS_ACCORDION_DISPLAY_FIRST_OUT</option>
+				<option value="2">COM_DJTABS_ACCORDION_DISPLAY_ALL_IN</option>
+			</field>
+			<field name="scroll_to_accordion"
+					type="list"
+					label="COM_DJTABS_SCROLL_TO_ACCORDION"
+					description="COM_DJTABS_SCROLL_TO_ACCORDION_DESC"
+					size=""
+					default=""
+				>
+				<option value="">COM_DJTABS_USE_GLOBAL</option>
+				<option value="0">JNO</option>
+				<option value="1">COM_DJTABS_SCROLL_TO_ACCORDION_MAIN</option>
+				<option value="2">COM_DJTABS_SCROLL_TO_ACCORDION_INNER</option>
+				<option value="3">COM_DJTABS_SCROLL_TO_ACCORDION_BOTH</option>
+			</field>
+			<field name="truncate_titles"
+					type="list"
+					label="COM_DJTABS_TRUNCATE_TITLES"
+					description="COM_DJTABS_TRUNCATE_TITLES_DESC"
+					size=""
+					default=""
+				>
+				<option value="">COM_DJTABS_USE_GLOBAL</option>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+		</fieldset>	
+	</fields>
+	<fields name="request">
+		<fieldset name="request">
+			<field name="tab"
+					type="inputbox"
+					label="COM_DJTABS_START_ITEM"
+					description="COM_DJTABS_START_ITEM_DESC"
+					default=""
+					class="param_number"
+			/>
+		</fieldset>
+	</fields>
+</metadata>

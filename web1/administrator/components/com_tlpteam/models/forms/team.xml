@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+        <field name="id" type="text" default="0" label="COM_TLPTEAM_FORM_LBL_TEAM_ID"
+            readonly="true" class="readonly"
+            description="JGLOBAL_FIELD_ID_DESC" /> 
+
+        <field name="department" type="category"
+            label="COM_TLPTEAM_FORM_LBL_TEAM_DEPARTMENT"
+            description="COM_TLPTEAM_FORM_DESC_TEAM_DEPARTMENT" 
+            extension="com_tlpteam"
+            menu_published="0"
+            filter="raw"
+            option_on="Yes"
+            option_off="Yes">
+            <option value="*">JALL</option>
+        </field>
+ 
+		<field name="filter_department" type="category"
+            label="COM_TLPTEAM_FORM_LBL_TEAM_DEPARTMENT"
+            description="COM_TLPTEAM_FORM_DESC_TEAM_DEPARTMENT"  extension="com_tlpteam" show_root="1" onchange="this.form.submit();" /> 
+
+        <field name="name" type="text"
+            label="COM_TLPTEAM_FORM_LBL_TEAM_NAME"
+            class="input-xxlarge input-large-text"
+            description="COM_TLPTEAM_FORM_DESC_TEAM_NAME" required="true" /> 
+
+        <field name="alias" type="text" label="JFIELD_ALIAS_LABEL"
+            description="JFIELD_ALIAS_DESC"
+            hint="JFIELD_ALIAS_PLACEHOLDER"
+            size="40" />
+
+        <field name="position" type="text"
+            label="COM_TLPTEAM_FORM_LBL_TEAM_POSITION"
+            description="COM_TLPTEAM_FORM_DESC_TEAM_POSITION" required="true"/> 
+
+		<field name="email" type="email" label="Email" description="Please enter email address" validate="email" /> 
+
+        <field name="phoneno" type="text"
+            label="COM_TLPTEAM_FORM_LBL_TEAM_PHONENO"
+            description="COM_TLPTEAM_FORM_DESC_TEAM_PHONENO" />
+
+        <field name="mobileno" type="text"
+            label="COM_TLPTEAM_FORM_LBL_TEAM_MOBILENO"
+            description="COM_TLPTEAM_FORM_DESC_TEAM_MOBILENO" /> 
+
+        <field name="personal_website" type="text"     
+            label="COM_TLPTEAM_FORM_LBL_TEAM_PERSONAL_WEBSITE"
+            description="COM_TLPTEAM_FORM_DESC_TEAM_PERSONAL_WEBSITE" /> 
+
+        <field name="location" type="text"
+            label="COM_TLPTEAM_FORM_LBL_TEAM_LOCATION"
+            description="COM_TLPTEAM_FORM_DESC_TEAM_LOCATION" /> 
+
+        <field name="profile_image" type="file"
+            label="COM_TLPTEAM_FORM_LBL_TEAM_PROFILE_IMAGE"
+            description="COM_TLPTEAM_FORM_DESC_TEAM_PROFILE_IMAGE"  
+            menu_published="0"
+            filter="raw"
+            upload_directory="images/photos"
+            option_on="Yes"
+            option_off="Yes"/> 
+
+        <field name="short_bio" type="textarea"
+            label="COM_TLPTEAM_FORM_LBL_TEAM_SHORT_BIO"
+            description="COM_TLPTEAM_FORM_DESC_TEAM_SHORT_BIO" 
+            cols="100"
+            rows="8"
+            option_on="Yes"
+            option_off="Yes"/> 
+
+        <field name="detail_bio" type="editor"
+            label="COM_TLPTEAM_FORM_LBL_TEAM_DETAIL_BIO"
+            description="COM_TLPTEAM_FORM_DESC_TEAM_DETAIL_BIO"
+            filter="raw"
+             /> 
+
+        <field name="facebook" type="text"       
+            label="COM_TLPTEAM_FORM_LBL_TEAM_FACEBOOK"
+            description="COM_TLPTEAM_FORM_DESC_TEAM_FACEBOOK" /> 
+
+        <field name="twitter" type="text"          
+            label="COM_TLPTEAM_FORM_LBL_TEAM_TWITTER"
+            description="COM_TLPTEAM_FORM_DESC_TEAM_TWITTER"/> 
+
+        <field name="linkedin" type="text"
+            label="COM_TLPTEAM_FORM_LBL_TEAM_LINKEDIN"
+            description="COM_TLPTEAM_FORM_DESC_TEAM_LINKEDIN" 
+            menu_published="0"
+            filter="raw"
+            option_on="Yes"
+            option_off="Yes" /> 
+
+        <field name="google_plus" type="text"
+            label="COM_TLPTEAM_FORM_LBL_TEAM_GOOGLE_PLUS"
+            description="COM_TLPTEAM_FORM_DESC_TEAM_GOOGLE_PLUS" /> 
+
+        <field name="youtube" type="text"
+            label="COM_TLPTEAM_FORM_LBL_TEAM_YOUTUBE"
+            description="COM_TLPTEAM_FORM_DESC_TEAM_YOUTUBE" /> 
+
+        <field name="vimeo" type="text"    
+            label="COM_TLPTEAM_FORM_LBL_TEAM_VIMEO"
+            description="COM_TLPTEAM_FORM_DESC_TEAM_VIMEO" /> 
+
+        <field name="instagram" type="text"
+            label="COM_TLPTEAM_FORM_LBL_TEAM_INSTAGRAM"
+            description="COM_TLPTEAM_FORM_DESC_TEAM_INSTAGRAM" /> 
+        <field name="joomla" type="text"
+            label="COM_TLPTEAM_FORM_LBL_TEAM_JOOMLA"
+            description="COM_TLPTEAM_FORM_DESC_TEAM_JOOMLA" /> 
+        <field name="wordpress" type="text"
+            label="COM_TLPTEAM_FORM_LBL_TEAM_WORDPRESS"
+            description="COM_TLPTEAM_FORM_DESC_TEAM_WORDPRESS" /> 
+        <field name="behance" type="text"
+            label="COM_TLPTEAM_FORM_LBL_TEAM_BEHANCE"
+            description="COM_TLPTEAM_FORM_DESC_TEAM_BEHANCE" /> 
+        <field name="xing" type="text"
+            label="COM_TLPTEAM_FORM_LBL_TEAM_XING"
+            description="COM_TLPTEAM_FORM_DESC_TEAM_XING" /> 
+        <field name="dribbble" type="text"
+            label="COM_TLPTEAM_FORM_LBL_TEAM_DRIBBLE"
+            description="COM_TLPTEAM_FORM_DESC_TEAM_DRIBBLE" /> 
+
+        <field name="skill1" type="foreignkey" class="inputbox"
+            label="COM_TLPTEAM_FORM_LBL_TEAM_SKILL1"
+            description="COM_TLPTEAM_FORM_DESC_TEAM_SKILL1" input_type="list" table="#__tlpteam_skills" key_field="id" value_field="title"  /> 
+
+        <field name="skill1_no" type="text" class="input-small"    
+            label="COM_TLPTEAM_FORM_LBL_TEAM_SKILL1_NO"
+            description="COM_TLPTEAM_FORM_DESC_TEAM_SKILL1_NO" 
+            menu_published="0"
+            filter="raw"
+            option_on="Yes"
+            option_off="Yes" /> 
+
+        <field name="skill2" type="foreignkey" class="inputbox"
+            label="COM_TLPTEAM_FORM_LBL_TEAM_SKILL2"
+            description="COM_TLPTEAM_FORM_DESC_TEAM_SKILL2" input_type="list" table="#__tlpteam_skills" key_field="id" value_field="title"  /> 
+
+        <field name="skill2_no" type="text" class="input-small"
+            label="COM_TLPTEAM_FORM_LBL_TEAM_SKILL2_NO"
+            description="COM_TLPTEAM_FORM_DESC_TEAM_SKILL2_NO" 
+            menu_published="0"
+            filter="raw"
+            option_on="Yes"
+            option_off="Yes" /> 
+
+        <field name="skill3" type="foreignkey" class="inputbox"
+            label="COM_TLPTEAM_FORM_LBL_TEAM_SKILL3"
+            description="COM_TLPTEAM_FORM_DESC_TEAM_SKILL3" input_type="list" table="#__tlpteam_skills" key_field="id" value_field="title"  /> 
+
+        <field name="skill3_no" type="text" class="input-small"
+            label="COM_TLPTEAM_FORM_LBL_TEAM_SKILL3_NO"
+            description="COM_TLPTEAM_FORM_DESC_TEAM_SKILL3_NO" 
+            menu_published="0"
+            filter="raw"
+            option_on="Yes"
+            option_off="Yes" /> 
+
+        <field name="skill4" type="foreignkey" class="inputbox"
+            label="COM_TLPTEAM_FORM_LBL_TEAM_SKILL4"
+            description="COM_TLPTEAM_FORM_DESC_TEAM_SKILL4" input_type="list" table="#__tlpteam_skills" key_field="id" value_field="title"  /> 
+
+        <field name="skill4_no" type="text" class="input-small"
+            label="COM_TLPTEAM_FORM_LBL_TEAM_SKILL4_NO"
+            description="COM_TLPTEAM_FORM_DESC_TEAM_SKILL4_NO" 
+            menu_published="0"
+            filter="raw"
+            option_on="Yes"
+            option_off="Yes" /> 
+
+        <field name="skill5" type="foreignkey" class="inputbox"
+            label="COM_TLPTEAM_FORM_LBL_TEAM_SKILL5"
+            description="COM_TLPTEAM_FORM_DESC_TEAM_SKILL5" input_type="list" table="#__tlpteam_skills" key_field="id" value_field="title"  /> 
+
+        <field name="skill5_no" type="text" class="input-small"
+            label="COM_TLPTEAM_FORM_LBL_TEAM_SKILL5_NO"
+            description="COM_TLPTEAM_FORM_DESC_TEAM_SKILL5_NO" 
+            menu_published="0"
+            filter="raw"
+            option_on="Yes"
+            option_off="Yes" /> 
+
+        
+        <field name="language" type="language"
+            label="COM_TLPTEAM_FORM_LBL_TEAM_LANGUAGE"
+            description="COM_TLPTEAM_FORM_DESC_TEAM_LANGUAGE" 
+            client="administrator" >
+            <option value="*">JALL</option>
+        </field>
+
+        <field name="access" type="accesslevel"
+            label="COM_TLPTEAM_FORM_LBL_TEAM_ACCESS"
+            description="COM_TLPTEAM_FORM_DESC_TEAM_ACCESS" /> 
+
+        <field name="created_by" type="createdby" default="" 
+            label="COM_TLPTEAM_FORM_LBL_TEAM_CREATED_BY"
+            description="COM_TLPTEAM_FORM_DESC_TEAM_CREATED_BY"  /> 
+
+        <field
+            name="state"
+            type="list"
+            label="JSTATUS"
+            description="JFIELD_PUBLISHED_DESC"
+            class="inputbox"
+            size="1"
+            default="1">
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+            <option value="2">JARCHIVED</option>
+            <option value="-2">JTRASHED</option>
+        </field> 
+
+        <field name="checked_out" type="hidden" filter="unset" />
+        <field name="checked_out_time" type="hidden" filter="unset" />
+
+	</fieldset>
+
+</form>

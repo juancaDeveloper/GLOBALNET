@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.4" type="plugin" group="ajax" method="upgrade">
+	<name>Extra Mega Menu - Ajax</name>
+	<author>smartaddons.com</author>
+    <creationDate>March 2017</creationDate>
+    <copyright>Copyright (C) 2010 - 2015 SmartAddons. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GPLv2 or later</license>
+    <authorEmail>contact@smartaddons.com</authorEmail>
+    <authorUrl>www.smartaddons.com</authorUrl>
+    <version>1.0</version>    
+
+    <files>
+        <filename plugin="xmenu">xmenu.php</filename>
+	</files>
+</extension>

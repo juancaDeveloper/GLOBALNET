@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+              <field name="id" type="text" default="0" label="COM_TLPTEAM_FORM_LBL_SETTING_ID"
+            readonly="true" class="readonly"
+            description="JGLOBAL_FIELD_ID_DESC" /> 
+
+       <field name="image_path" type="text"
+                
+            label="COM_TLPTEAM_FORM_LBL_SETTING_IMAGE_PATH"
+            description="COM_TLPTEAM_FORM_DESC_SETTING_IMAGE_PATH" 
+                 default="images/tlpteam" 
+                
+                 required="true"  /> 
+
+       <field name="smallimage_width" type="text"
+                
+            label="COM_TLPTEAM_FORM_LBL_SETTING_SMALLIMAGE_WIDTH"
+            description="COM_TLPTEAM_FORM_DESC_SETTING_SMALLIMAGE_WIDTH" 
+                 default="90" 
+                
+                 required="true" 
+            menu_published="0"
+            filter="raw"
+            option_on="Yes"
+            option_off="Yes" /> 
+
+       <field name="smallimage_height" type="text"
+                
+            label="COM_TLPTEAM_FORM_LBL_SETTING_SMALLIMAGE_HEIGHT"
+            description="COM_TLPTEAM_FORM_DESC_SETTING_SMALLIMAGE_HEIGHT" 
+                 default="90" 
+                
+                 required="true" 
+            menu_published="0"
+            filter="raw"
+            option_on="Yes"
+            option_off="Yes" /> 
+
+       <field name="mediumimage_width" type="text"
+                
+            label="COM_TLPTEAM_FORM_LBL_SETTING_MEDIUMIMAGE_WIDTH"
+            description="COM_TLPTEAM_FORM_DESC_SETTING_MEDIUMIMAGE_WIDTH" 
+                 default="250" 
+                
+                 required="true" 
+            menu_published="0"
+            filter="raw"
+            option_on="Yes"
+            option_off="Yes" /> 
+
+       <field name="mediumimage_height" type="text"
+                
+            label="COM_TLPTEAM_FORM_LBL_SETTING_MEDIUMIMAGE_HEIGHT"
+            description="COM_TLPTEAM_FORM_DESC_SETTING_MEDIUMIMAGE_HEIGHT" 
+                 default="300" 
+                
+                 required="true" 
+            menu_published="0"
+            filter="raw"
+            option_on="Yes"
+            option_off="Yes" /> 
+
+       <field name="largeimage_width" type="text"
+                
+            label="COM_TLPTEAM_FORM_LBL_SETTING_LARGEIMAGE_WIDTH"
+            description="COM_TLPTEAM_FORM_DESC_SETTING_LARGEIMAGE_WIDTH" 
+                 default="550" 
+                
+                 required="true" 
+            menu_published="0"
+            filter="raw"
+            option_on="Yes"
+            option_off="Yes" /> 
+
+       <field name="largeimage_height" type="text"
+                
+            label="COM_TLPTEAM_FORM_LBL_SETTING_LARGEIMAGE_HEIGHT"
+            description="COM_TLPTEAM_FORM_DESC_SETTING_LARGEIMAGE_HEIGHT" 
+                 default="600" 
+                
+                 required="true" 
+            menu_published="0"
+            filter="raw"
+            option_on="Yes"
+            option_off="Yes" /> 
+
+       <field name="display_no" type="list"
+                
+            label="COM_TLPTEAM_FORM_LBL_SETTING_DISPLAY_NO"
+            description="COM_TLPTEAM_FORM_DESC_SETTING_DISPLAY_NO" 
+                
+                
+                
+            option_on="Yes"
+            option_off="Yes">
+                <option value="2">2 Per Row</option>
+                <option value="3">3 Per Row</option>
+                <option value="4">4 Per Row</option>
+        </field> 
+
+       <field name="enable_bootstrap" type="radio" buttons="true"
+                                                class="btn - group btn - group - yesno" default="1"
+        
+        
+            label="COM_TLPTEAM_FORM_LBL_SETTING_ENABLE_BOOTSTRAP"
+            description="COM_TLPTEAM_FORM_DESC_SETTING_ENABLE_BOOTSTRAP" ><option value="1">COM_TLPTEAM_SETTINGS_ENABLE_BOOTSTRAP_OPTION_ON</option><option value="0">COM_TLPTEAM_SETTINGS_ENABLE_BOOTSTRAP_OPTION_OFF</option></field> 
+
+       <field name="bootstrap_version" type="radio" buttons="true"
+                                                class="btn - group btn - group - yesno" default="1"
+        
+        
+            label="COM_TLPTEAM_FORM_LBL_SETTING_BOOTSTRAP_VERSION"
+            description="COM_TLPTEAM_FORM_DESC_SETTING_BOOTSTRAP_VERSION" ><option value="1">COM_TLPTEAM_SETTINGS_BOOTSTRAP_VERSION_OPTION_ON</option><option value="0">COM_TLPTEAM_SETTINGS_BOOTSTRAP_VERSION_OPTION_OFF</option></field> 
+
+       <field name="image_grid" type="list"
+                
+            label="COM_TLPTEAM_FORM_LBL_SETTING_IMAGE_GRID"
+            description="COM_TLPTEAM_FORM_DESC_SETTING_IMAGE_GRID" 
+                 default="4" 
+                
+                
+            menu_published="0"
+            filter="raw"
+            option_on="Yes"
+            option_off="Yes">
+                <option value="2">Grid 2</option>
+                <option value="3">Grid 3</option>
+                <option value="4">Grid 4</option>
+                <option value="5">Grid 5</option>
+                <option value="6">Grid 6</option>
+        </field> 
+
+       <field name="template" type="list"
+                
+            label="COM_TLPTEAM_FORM_LBL_SETTING_TEMPLATE"
+            description="COM_TLPTEAM_FORM_DESC_SETTING_TEMPLATE" 
+                 default="1" 
+                
+                >
+                <option value="1">Template 01</option>
+                <option value="2">Template 02</option>
+                <option value="3">Template 03</option>
+                <option value="4">Template 04</option>
+                <option value="5">Template 05</option>
+                <option value="6">Template 06</option>
+        </field> 
+
+       <field name="primary_color" type="text"
+                
+            label="COM_TLPTEAM_FORM_LBL_SETTING_PRIMARY_COLOR"
+            description="COM_TLPTEAM_FORM_DESC_SETTING_PRIMARY_COLOR" 
+                
+                
+                 required="true"  /> 
+
+       <field name="created_by" type="createdby" default="" 
+            label="COM_TLPTEAM_FORM_LBL_SETTING_CREATED_BY"
+            description="COM_TLPTEAM_FORM_DESC_SETTING_CREATED_BY"  /> 
+
+         <field
+        name="state"
+        type="list"
+        label="JSTATUS"
+        description="JFIELD_PUBLISHED_DESC"
+        class="inputbox"
+        size="1"
+        default="1">
+        <option value="1">JPUBLISHED</option>
+        <option value="0">JUNPUBLISHED</option>
+        <option value="2">JARCHIVED</option>
+        <option value="-2">JTRASHED</option>
+    </field> 
+
+                        <field name="checked_out" type="hidden" filter="unset" />
+        <field name="checked_out_time" type="hidden" filter="unset" />
+
+	</fieldset>
+
+</form>

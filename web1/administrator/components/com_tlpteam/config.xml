@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <fieldset label="COM_TLPTEAM_GENERAL_SETTINGS" name="tlpteam" >
+            <field name="image_path" type="text" 
+                  label="COM_TLPTEAM_FORM_LBL_IMAGE_PATH"
+                  description="COM_TLPTEAM_FORM_DESC_IMAGE_PATH" 
+                  default="images/tlpteam" />
+            <field name="smallimage_width" type="text"
+                  label="COM_TLPTEAM_FORM_LBL_SMALLIMAGE_WIDTH"
+                  description="COM_TLPTEAM_FORM_DESC_SMALLIMAGE_WIDTH" 
+                  default="200" menu_published="0" filter="raw" />
+            <field name="smallimage_height" type="text"
+                  label="COM_TLPTEAM_FORM_LBL_SMALLIMAGE_HEIGHT"
+                  description="COM_TLPTEAM_FORM_DESC_SMALLIMAGE_HEIGHT" 
+                  default="250" menu_published="0" filter="raw" />
+            <field name="mediumimage_width" type="text"
+                  label="COM_TLPTEAM_FORM_LBL_MEDIUMIMAGE_WIDTH"
+                  description="COM_TLPTEAM_FORM_DESC_MEDIUMIMAGE_WIDTH" 
+                  default="400" />
+            <field name="mediumimage_height" type="text"
+                  label="COM_TLPTEAM_FORM_LBL_MEDIUMIMAGE_HEIGHT"
+                  description="COM_TLPTEAM_FORM_DESC_MEDIUMIMAGE_HEIGHT" 
+                  default="500" />
+            <field name="largeimage_width" type="text"
+                  label="COM_TLPTEAM_FORM_LBL_LARGEIMAGE_WIDTH"
+                  description="COM_TLPTEAM_FORM_DESC_LARGEIMAGE_WIDTH" 
+                  default="600" />
+            <field name="largeimage_height" type="text"
+                  label="COM_TLPTEAM_FORM_LBL_LARGEIMAGE_HEIGHT"
+                  description="COM_TLPTEAM_FORM_DESC_LARGEIMAGE_HEIGHT" 
+                  default="700"  />
+            <field name="enable_font_awesome" type="radio" class="btn-group btn-group-yesno" 
+                  label="COM_TLPTEAM_FORM_LBL_ENABLE_FONT_AWESOME"
+                  description="COM_TLPTEAM_FORM_DESC_ENABLE_FONT_AWESOME" default="0" >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+            </field>  
+            <field name="bootstrap_version" type="radio" class="btn-group btn-group-yesno" 
+                  label="COM_TLPTEAM_FORM_LBL_BOOTSTRAP_VERSION"
+                  description="COM_TLPTEAM_FORM_DESC_BOOTSTRAP_VERSION" default="1">
+                    <option value="3">Version 3</option>
+                    <option value="1">Own Grid</option>
+            </field>     
+            <field name="g_item_to_item_margin" type="radio" class="btn-group btn-group-yesno" 
+                  label="COM_TLPTEAM_FORM_LBL_ITEMTOITEM_MARGIN"
+                  description="COM_TLPTEAM_FORM_DESC_ITEMTOITEM_MARGIN" default="1" >
+                    <option value="1">Bootstrap(default)</option>
+                    <option value="0">No Margin</option>
+            </field>
+            <field name="g_gutter" type="text" showon="g_item_to_item_margin:1" 
+                  label="COM_TLPTEAM_FORM_LBL_GUTTER"
+                  description="COM_TLPTEAM_FORM_DESC_GUTTER" >
+                  
+            </field>
+            <field name="g_short_description_limit" type="text"
+                  label="COM_TLPTEAM_FORM_LBL_SHORT_DESCRIPRION_LIMIT"
+                  description="COM_TLPTEAM_FORM_DESC_SHORT_DESCRIPTION_LIMIT" 
+                  default="150"  />
+                 
+            <field name="g_layout" type="list"
+                  label="COM_TLPTEAM_FORM_LBL_TEMPLATE"
+                  description="COM_TLPTEAM_FORM_DESC_TEMPLATE" 
+                  default="1">
+                    <option value="layout1">Layout 01</option>
+                    <option value="layout2">Layout 02</option>
+                    <option value="layout3">Layout 03</option>
+                    <option value="layout4">Layout 04</option>
+                    <option value="layout5">Layout 05(Table)</option>
+                    <option value="layout6">Layout 06</option>
+                    <option value="layout7">Layout 07</option>
+                    <option value="layout8">Layout 08</option>
+                    <option value="layout9">Layout 09</option>
+                    <option value="layout10">Layout 10</option>
+                    <option value="layout11">Layout 11</option>
+                    <option value="layout12">Layout 12</option>
+                    <option value="layout13">Layout 13</option>
+                    <option value="layout14">Layout 14</option>
+                    <option value="isotope1">Isotope 1</option>
+                    <option value="isotope2">Isotope 2</option>
+                    <option value="isotope3">Isotope 3</option>
+                    <option value="isotope4">Isotope 4</option>
+                    <option value="isotope5">Isotope 5</option>
+                    <option value="isotope6">Isotope 6</option>
+                    <option value="isotope7">Isotope 7</option>
+                    <option value="isotope8">Isotope 8</option>
+            </field>
+            <field name="g_display_no" type="list"              
+                  label="COM_TLPTEAM_FORM_LBL_DISPLAY_NO"
+                  description="COM_TLPTEAM_FORM_DESC_DISPLAY_NO" 
+                  default="4" menu_published="0" filter="raw">
+                      <option value="1">1 Per Row</option>
+                      <option value="2">2 Per Row</option>
+                      <option value="3">3 Per Row</option>
+                      <option value="4">4 Per Row</option>
+                      <option value="6">6 Per Row</option>
+            </field>
+            <field name="g_display_no_tab" type="list"              
+                  label="COM_TLPTEAM_FORM_LBL_DISPLAY_NO_TAB"
+                  description="COM_TLPTEAM_FORM_DESC_DISPLAY_NO_TAB" 
+                  default="3" menu_published="0" filter="raw">
+                      <option value="1">1 Per Row</option>
+                      <option value="2">2 Per Row</option>
+                      <option value="3">3 Per Row</option>
+                      <option value="4">4 Per Row</option>
+                      <option value="6">6 Per Row</option>
+            </field>
+            <field name="g_display_no_mob" type="list"              
+                  label="COM_TLPTEAM_FORM_LBL_DISPLAY_NO_MOB"
+                  description="COM_TLPTEAM_FORM_DESC_DISPLAY_NO_MOB" 
+                  default="1" menu_published="0" filter="raw">
+                      <option value="1">1 Per Row</option>
+                      <option value="2">2 Per Row</option>
+                      <option value="3">3 Per Row</option>
+                      <option value="4">4 Per Row</option>
+                      <option value="6">6 Per Row</option>
+            </field>
+            <field name="g_image_style" type="radio" class="btn-group btn-group-yesno"
+                  label="COM_TLPTEAM_FORM_LBL_IMAGE_STYLE"
+                  description="COM_TLPTEAM_FORM_DESC_IMAGE_STYLE" 
+                  default="1">
+                    <option value="1">Square</option>
+                    <option value="2">Rounded</option>
+            </field>
+            <field name="g_gray_scale" type="radio" class="btn-group btn-group-yesno"
+                  label="COM_TLPTEAM_FORM_LBL_GRAYSCALE"
+                  description="COM_TLPTEAM_FORM_DESC_GRAYSCALE" 
+                  default="0">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+            </field>
+            <field name="g_primary_color" type="color" default=""
+                  label="COM_TLPTEAM_FORM_LBL_PRIMARY_COLOR"
+                  description="COM_TLPTEAM_FORM_DESC_PRIMARY_COLOR" />
+            <field name="g_overlay_item_padding" type="text"
+                  label="COM_TLPTEAM_FORM_LBL_OVERLAY_ITEM_PADDING"
+                  description="COM_TLPTEAM_FORM_DESC_OVERLAY_ITEM_PADDING" 
+                  default="15"  /> 
+            <field name="g_overlay_color" type="color" default=""
+                  label="COM_TLPTEAM_FORM_LBL_OVERLAY_COLOR"
+                  description="COM_TLPTEAM_FORM_DESC_OVERLAY_COLOR" />
+            <field name="g_overlay_opacity" type="list"              
+                  label="COM_TLPTEAM_FORM_LBL_OVERLAY_OPACITY"
+                  description="COM_TLPTEAM_FORM_DESC_DISPLAY_NO" 
+                  default="4" menu_published="0" filter="raw">
+                      <option value=".1">10%</option>
+                      <option value=".2">20%</option>
+                      <option value=".3">30%</option>
+                      <option value=".4">40%</option>
+                      <option value=".5">50%</option>
+                      <option value=".6">60%</option>
+                      <option value=".7">70%</option>
+                      <option value=".8">80%</option>
+                      <option value=".9">90%</option>
+            </field>
+            <field name="g_name_font_size" type="text"
+                  label="COM_TLPTEAM_FORM_LBL_NAME_FONT_SIZE"
+                  description="COM_TLPTEAM_FORM_DESC_NAME_FONT_SIZE" 
+                  default="18" />
+            <field name="g_name_font_color" type="color" default=""
+                  label="COM_TLPTEAM_FORM_LBL_NAME_FONT_COLOR"
+                  description="COM_TLPTEAM_FORM_DESC_NAME_FONT_COLOR" />
+            <field name="g_name_text_align" type="list"
+                  label="COM_TLPTEAM_FORM_LBL_NAME_TEXT_ALIGN"
+                  description="COM_TLPTEAM_FORM_DESC_NAME_TEXT_ALIGN" 
+                  default="">
+                    <option value="left">Left</option>
+                    <option value="right">Right</option>
+                    <option value="center">Center</option>
+            </field>
+            
+            <field name="g_position_font_size" type="text"
+                  label="COM_TLPTEAM_FORM_LBL_POSITION_FONT_SIZE"
+                  description="COM_TLPTEAM_FORM_DESC_POSITION_FONT_SIZE" 
+                  default="14" />
+            <field name="g_position_font_color" type="color" default=""
+                  label="COM_TLPTEAM_FORM_LBL_POSITION_FONT_COLOR"
+                  description="COM_TLPTEAM_FORM_DESC_POSITION_FONT_COLOR" />
+            <field name="g_position_text_align" type="list"
+                  label="COM_TLPTEAM_FORM_LBL_POSITION_TEXT_ALIGN"
+                  description="COM_TLPTEAM_FORM_DESC_POSITION_TEXT_ALIGN" 
+                  default="">
+                    <option value="center">Center</option>
+                    <option value="left">Left</option>
+                    <option value="right">Right</option>
+            </field>     
+            <field name="g_short_bio_font_color" type="color" default=""
+                  label="COM_TLPTEAM_FORM_LBL_SHORT_BIO_FONT_COLOR"
+                  description="COM_TLPTEAM_FORM_DESC_SHORT_BIO_FONT_COLOR" />      
+            <field name="g_short_bio_text_align" type="list"
+                  label="COM_TLPTEAM_FORM_LBL_SHORT_BIO_TEXT_ALIGN"
+                  description="COM_TLPTEAM_FORM_DESC_SHORT_BIO_TEXT_ALIGN" 
+                  default="">
+                    <option value="left">Left</option>
+                    <option value="right">Right</option>
+                    <option value="center">Center</option>
+                    <option value="justify">Justify</option>
+            </field>       
+            <field name="g_social_icon_background" type="color" default=""
+                  label="COM_TLPTEAM_FORM_LBL_SOCIAL_ICON_BACKGROUND"
+                  description="COM_TLPTEAM_FORM_DESC_SOCIAL_ICON_BACKGROUND" />
+            <field name="g_social_icon_color" type="color" default=""
+                  label="COM_TLPTEAM_FORM_LBL_SOCIAL_ICON_COLOR"
+                  description="COM_TLPTEAM_FORM_DESC_SOCIAL_ICON_COLOR" />
+            <field name="g_social_icon_size" type="text"
+                  label="COM_TLPTEAM_FORM_LBL_SOCIAL_ICON_SIZE"
+                  description="COM_TLPTEAM_FORM_DESC_SOCIAL_ICON_SIZE" 
+                  default="16" />
+            <field name="g_btn_bg" type="color" default=""
+                  label="COM_TLPTEAM_FORM_LBL_BTN_BG"
+                  description="COM_TLPTEAM_FORM_DESC_BTN_BG" />
+            <field name="g_btn_text_color" type="color" default=""
+                  label="COM_TLPTEAM_FORM_LBL_BTN_TEXT_COLOR"
+                  description="COM_TLPTEAM_FORM_DESC_BTN_TEXT_COLOR" />
+            <field name="g_btn_bg_hover" type="color" default=""
+                  label="COM_TLPTEAM_FORM_LBL_BTN_BG_HOVER"
+                  description="COM_TLPTEAM_FORM_DESC_BTN_BG_HOVER" />
+
+            <field name="link_detail" type="radio" class="btn-group btn-group-yesno"
+                  label="COM_TLPTEAM_FORM_LBL_LINK_DETAIL"
+                  description="COM_TLPTEAM_FORM_DESC_LINK_DETAIL" default="1" >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+            </field>
+            <field name="link_type" type="radio" showon="link_detail:1" class="btn-group btn-group-yesno"
+                  label="COM_TLPTEAM_FORM_LBL_LINK_TYPE"
+                  description="COM_TLPTEAM_FORM_DESC_LINK_TYPE" default="1" >
+                    <option value="1">Detail Page</option>
+                    <option value="2">POPUP</option>
+            </field>
+            <field name="image_grid" type="list"
+                  label="COM_TLPTEAM_FORM_LBL_IMAGE_GRID"
+                  description="COM_TLPTEAM_FORM_DESC_IMAGE_GRID" 
+                  default="4">
+                    <option value="2">Grid 2</option>
+                    <option value="3">Grid 3</option>
+                    <option value="4">Grid 4</option>
+                    <option value="5">Grid 5</option>
+                    <option value="6">Grid 6</option>
+            </field>   
+            
+    </fieldset>
+
+     <fieldset label="COM_TLPTEAM_FIELD_CONTROL" id="fieldcontrollist" name="tlpteamlistpagefields">
+          <field name="g_name_field" type="radio" class="btn-group btn-group-yesno"   
+                  label="COM_TLPTEAM_FORM_LBL_NAME_FIELD"
+                  description="COM_TLPTEAM_FORM_DESC_NAME_FIELD" default="1" >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+            </field>  
+            <field name="g_position_field" type="radio" class="btn-group btn-group-yesno"
+                  label="COM_TLPTEAM_FORM_LBL_POSITION_FIELD"
+                  description="COM_TLPTEAM_FORM_DESC_POSITION_FIELD" default="1" >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+            </field>
+            <field name="g_shortbio_field" type="radio" class="btn-group btn-group-yesno"
+                  label="COM_TLPTEAM_FORM_LBL_SHORTBIO_FIELD"
+                  description="COM_TLPTEAM_FORM_DESC_SHORTBIO_FIELD" default="1" >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+            </field>   
+            <field name="g_email_field" type="radio" class="btn-group btn-group-yesno"
+                  label="COM_TLPTEAM_FORM_LBL_EMAIL_FIELD"
+                  description="COM_TLPTEAM_FORM_DESC_EMAIL_FIELD" default="1" >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+            </field>  
+            <field name="g_phoneno_field" type="radio" class="btn-group btn-group-yesno"
+                  label="COM_TLPTEAM_FORM_LBL_PHONENO_FIELD"
+                  description="COM_TLPTEAM_FORM_DESC_PHONENO_FIELD" default="1" >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+            </field>
+            <field name="g_mobileno_field" type="radio" class="btn-group btn-group-yesno"
+                  label="COM_TLPTEAM_FORM_LBL_MOBILENO_FIELD"
+                  description="COM_TLPTEAM_FORM_DESC_MOBILENO_FIELD" default="1" >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+            </field>   
+            <field name="g_website_field" type="radio" class="btn-group btn-group-yesno"
+                  label="COM_TLPTEAM_FORM_LBL_WEBSITE_FIELD"
+                  description="COM_TLPTEAM_FORM_DESC_WEBSITE_FIELD" default="1" >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+            </field>  
+            <field name="g_location_field" type="radio" class="btn-group btn-group-yesno"
+                  label="COM_TLPTEAM_FORM_LBL_LOCATION_FIELD"
+                  description="COM_TLPTEAM_FORM_DESC_LOCATION_FIELD" default="1" >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+            </field>  
+             
+            <field name="g_socialicon_field" type="radio" class="btn-group btn-group-yesno"
+                  label="COM_TLPTEAM_FORM_LBL_SOCIALICON_FIELD"
+                  description="COM_TLPTEAM_FORM_DESC_SOCIALICON_FIELD" default="1" >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+            </field>  
+            <field name="g_skill_field" type="radio" class="btn-group btn-group-yesno"
+                  label="COM_TLPTEAM_FORM_LBL_SKILL_FIELD"
+                  description="COM_TLPTEAM_FORM_DESC_SKILL_FIELD" default="1" >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+            </field>  
+     </fieldset>
+    
+     <fieldset label="COM_TLPTEAM_FIELD_CONTROL_DETAIL_PAGE" id="fieldcontroldetail" name="tlpteamdetailfields">
+          <field name="name_field_detail" type="radio" class="btn-group btn-group-yesno"   
+                  label="COM_TLPTEAM_FORM_LBL_NAME_FIELD"
+                  description="COM_TLPTEAM_FORM_DESC_NAME_FIELD" default="1" >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+            </field>  
+            <field name="position_field_detail" type="radio" class="btn-group btn-group-yesno"
+                  label="COM_TLPTEAM_FORM_LBL_POSITION_FIELD"
+                  description="COM_TLPTEAM_FORM_DESC_POSITION_FIELD" default="1" >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+            </field>  
+            <field name="email_field_detail" type="radio" class="btn-group btn-group-yesno"
+                  label="COM_TLPTEAM_FORM_LBL_EMAIL_FIELD"
+                  description="COM_TLPTEAM_FORM_DESC_EMAIL_FIELD" default="1" >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+            </field>  
+            <field name="phoneno_field_detail" type="radio" class="btn-group btn-group-yesno"
+                  label="COM_TLPTEAM_FORM_LBL_PHONENO_FIELD"
+                  description="COM_TLPTEAM_FORM_DESC_PHONENO_FIELD" default="1" >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+            </field>
+            <field name="mobileno_field" type="radio" class="btn-group btn-group-yesno"
+                  label="COM_TLPTEAM_FORM_LBL_MOBILENO_FIELD"
+                  description="COM_TLPTEAM_FORM_DESC_MOBILENO_FIELD" default="1" >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+            </field>   
+            <field name="website_field_detail" type="radio" class="btn-group btn-group-yesno"
+                  label="COM_TLPTEAM_FORM_LBL_WEBSITE_FIELD"
+                  description="COM_TLPTEAM_FORM_DESC_WEBSITE_FIELD" default="1" >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+            </field>  
+            <field name="location_field_detail" type="radio" class="btn-group btn-group-yesno"
+                  label="COM_TLPTEAM_FORM_LBL_LOCATION_FIELD"
+                  description="COM_TLPTEAM_FORM_DESC_LOCATION_FIELD" default="1" >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+            </field>  
+            
+            <field name="socialicon_field_detail" type="radio" class="btn-group btn-group-yesno"
+                  label="COM_TLPTEAM_FORM_LBL_SOCIALICON_FIELD"
+                  description="COM_TLPTEAM_FORM_DESC_SOCIALICON_FIELD" default="1" >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+            </field>  
+            <field name="skill_field_detail" type="radio" class="btn-group btn-group-yesno"
+                  label="COM_TLPTEAM_FORM_LBL_SKILL_FIELD"
+                  description="COM_TLPTEAM_FORM_DESC_SKILL_FIELD" default="1" >
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+            </field>  
+     </fieldset>
+
+    <fieldset name="permissions"
+            	description="JCONFIG_PERMISSIONS_DESC"
+            	label="JCONFIG_PERMISSIONS_LABEL">
+		<field  name="rules" type="rules" component="com_tlpteam"
+              class="inputbox" filter="rules" validate="rules"
+              label="JCONFIG_PERMISSIONS_LABEL"
+              section="component" />
+	</fieldset>
+</config>

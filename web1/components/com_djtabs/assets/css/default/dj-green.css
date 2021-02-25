@@ -1,0 +1,46 @@
+.dj-green .djtabs-title{
+	color:#51980E;
+}
+.dj-green .djtabs-in-border{
+	border-color: #51980E;
+}
+.dj-green .djtabs-panel-title{
+	color:#51980E;
+}
+.dj-green .djtabs-article-category > a:visited, 
+.dj-green .djtabs-article-category > a:link{
+	color:#51980E;
+}
+.dj-green span.djtabs-readmore a:visited, 
+.dj-green span.djtabs-readmore a:link{
+	color:#51980E;
+}
+.dj-green .djtabs-article-content a:visited, .dj-green .djtabs-article-content a:link {
+	color:#51980E;
+}
+
+.dj-green .djtabs-title{
+	background-image:url('../../images/dj-green/tab.png');
+}
+.dj-green .djtabs-title-img-right{
+	background:url('../../images/dj-green/tab-right.png') no-repeat;
+}
+.dj-green .djtabs-active > span.djtabs-title-img-right{
+	background:url('../../images/dj-green/tab-active-right.png') no-repeat;
+}
+.dj-green .djtabs-active{
+	background-image:url('../../images/dj-green/tab-active.png');
+}
+.dj-green .djtabs-panel{
+	background:url('../../images/dj-green/accordion-panel.png') repeat-x;
+}
+.dj-green .djtabs-panel > span.djtabs-panel-toggler{
+	background:url('../../images/dj-green/arrow-down.png') no-repeat center;
+}
+.dj-green .djtabs-panel-active > span.djtabs-panel-toggler{
+	background:url('../../images/dj-green/arrow-up.png') no-repeat center;
+}
+/* 1.3.1 */
+.dj-green .djtabs-title-wrapper .djtabs-title{
+    outline: none;
+}

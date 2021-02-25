@@ -1,0 +1,84 @@
+ul.jssocialicons > li > a.iconset-flat {
+    margin-right: inherit;
+    margin-bottom: inherit;
+}
+
+ul.jssocialicons > li > a.iconset-flat:hover {
+    opacity: 0.7;
+}
+
+ul.jssocialicons > li > a.si-delicious {
+    color: #0076e8;
+}
+
+ul.jssocialicons > li > a.si-digg {
+    color: #191919;
+}
+
+ul.jssocialicons > li > a.si-dribbble {
+    color: #ea4c89;
+}
+
+ul.jssocialicons > li > a.si-facebook {
+    color: #365899;
+}
+
+ul.jssocialicons > li > a.si-flickr {
+    color: #0063db;
+}
+
+ul.jssocialicons > li > a.si-foursquare {
+    color: #fa4778;
+}
+
+ul.jssocialicons > li > a.si-google-plus {
+    color: #db4437;
+}
+
+ul.jssocialicons > li > a.si-instagram {
+    color: #262626;
+}
+
+ul.jssocialicons > li > a.si-lastfm {
+    color: #b90000;
+}
+
+ul.jssocialicons > li > a.si-linkedin {
+    color: #006fa6;
+}
+
+ul.jssocialicons > li > a.si-meetup {
+    color: #ed1c40;
+}
+
+ul.jssocialicons > li > a.si-pinterest {
+    color: #bd081c;
+}
+
+ul.jssocialicons > li > a.si-stumbleupon {
+    color: #eb4823;
+}
+
+ul.jssocialicons > li > a.si-tumblr {
+    color: #529ecc;
+}
+
+ul.jssocialicons > li > a.si-twitter {
+    color: #1da1f2;
+}
+
+ul.jssocialicons > li > a.si-vimeo {
+    color: #4bf;
+}
+
+ul.jssocialicons > li > a.si-vine {
+    color: #00bf8f;
+}
+
+ul.jssocialicons > li > a.si-youtube {
+    color: #cc181e;
+}
+
+ul.jssocialicons > li > a.si-yelp {
+    color: #d32323;
+}

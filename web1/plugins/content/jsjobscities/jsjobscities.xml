@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="content" method="upgrade">
+	<name>JS Jobs BY Cities</name>
+	<author>Joom Sky</author>
+	<creationDate>jun 23, 2011</creationDate>
+	<copyright>(C) 2010. All rights reserved.</copyright>
+	<license>GNU/GPL</license>
+	<authorEmail>ahmad@joomsky.com</authorEmail>
+	<authorUrl>www.joomsky.com</authorUrl>
+	<version>1.0.0</version>
+	<description>Usage {jsjobscities} Show job by Cities from js jobs database. </description>
+
+	<files>
+		<filename plugin="jsjobscities">jsjobscities.php</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_content_jsjobscities.ini</language>
+	</languages>
+
+	<params>
+		<param name="noofjobs" type="text" default="10" label="JS_DISPLAY_MAXIMUM_JOBS_BY_CITIES" description="max record 100" />
+		<param name="title" type="text" default="Jobs By Cities " label="JS_TITLE" description="Title" />
+		<param name="shtitle" type="radio" default="1" label="JS_TITLE" description="Show/Hide the title">
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+		</param>
+		<param name="schj" type="radio" default="1" label="SHOW_ONLY_CITY_HAVE_JOBS" description="Yes No city have jobs">
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+		</param>
+		<param name="separator" type="radio" default="1" label="JS_SEPARATOR" description="Show/Hide the line separator">
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+		</param>
+
+		<param name="colperrow" type="text" label="JS_COLUMN_PER_ROW" description="Column Per Row" />
+
+	</params>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="noofjobs" type="text" default="10" label="JS_DISPLAY_MAXIMUM_JOBS_BY_CITIES" description="max record 100" />
+				<field name="theme" type="list" default="1" label="JS_THEME" description="Select theme of this module">
+					<option value="1">JS Jobs Theme</option>
+					<option value="2">Template Theme</option>
+					<option value="0">No Theme</option>
+				</field>
+				<field name="title" type="text" default="Jobs By Cities " label="JS_TITLE" description="Title" />
+				<field name="shtitle" type="radio" default="1" label="JS_TITLE" description="Show/Hide the title">
+					<option value="0">Hide</option>
+					<option value="1">Show</option>
+				</field>
+				<field name="schj" type="radio" default="1" label="SHOW_ONLY_CITY_HAVE_JOBS" description="Yes No city have jobs">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="colperrow" type="text" label="JS_COLUMN_PER_ROW" description="Column Per Row" />
+				<field name="separator" type="radio" default="1" label="JS_SEPARATOR" description="Show/Hide the line separator">
+					<option value="0">Hide</option>
+					<option value="1">Show</option>
+				</field>
+				<field name="Itemid" type="text" default="" label="Item Id" description="Item Id" />
+				<field name="color1" type="color" label="TITLE_COLOR" description="LEAVE_BLANK_FOR_DEFAULT_COLOR" />
+	                <field name="color2" type="color" label="BACKGROUND_COLOR" description="LEAVE_BLANK_FOR_DEFAULT_COLOR" />
+	                <field name="color3" type="color" label="BORDER_COLOR" description="LEAVE_BLANK_FOR_DEFAULT_COLOR" />
+			</fieldset>
+		</fields>
+	</config>
+ </extension>

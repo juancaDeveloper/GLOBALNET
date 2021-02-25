@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0"  client="site" method="upgrade">
+	<name>JS Jobs On Map</name>
+	<author>Joom Sky</author>
+	<creationDate>Jun 8, 2015</creationDate>
+	<copyright>(C) 2010. All rights reserved.</copyright>
+	<license>GNU/GPL</license>
+	<authorEmail>ahmad@joomsky.com</authorEmail>
+	<authorUrl>www.joomsky.com</authorUrl>
+	<version>1.0.0</version>
+	<description>Show jobs on google map from JS Jobs database. </description>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="title" type="text" default="Hot Jobs" label="JS_TITLE" description="JS_TITLE" />
+				<field name="showtitle" type="radio" default="1" label="JS_SHOW_TITLE" description="JS_SHOW_TITLE">
+					<option value="0">Hide</option>
+					<option value="1">Show</option>
+				</field>
+				<field name="noofjobs" type="text" default="20" label="JS_DISPLAY_NUMBER_OF_JOBS" description="JS_NUMBER_OF_JOBS_TO_SHOW" filter="integer"/>
+				<field name="company" type="radio" default="1" label="JS_COMPANY" description="SHOW_HIDE_THE_COMPANY">
+					<option value="0">Hide</option>
+					<option value="1">Show</option>
+				</field>
+				<field name="category" type="radio" default="1" label="JS_CATEGORY" description="SHOW_HIDE_THE_CATEGORY">
+					<option value="0">Hide</option>
+					<option value="1">Show</option>
+				</field>
+                <field name="moduleheight" type="text" default="400" label="JS_MODULE_HEIGHT" description="JS_MODULE_HEIGHT_IE" filter="integer"/>
+                <field name="zoom" type="text" default="10" label="JS_MAP_ZOOM" description="JS_SET_MAP_ZOOM_DEFAULT_IS_10" filter="integer"/>
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+	<files>
+		<filename module="mod_jsjobsonmap">helper.php</filename>
+		<filename module="mod_jsjobsonmap">mod_jsjobsonmap.php</filename>
+		<folder module="mod_jsjobsonmap">tmpl</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_jsjobsonmap.ini</language>
+	</languages>
+</extension>
+

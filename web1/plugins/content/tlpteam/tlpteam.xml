@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="content">
+    <name>plg_content_tlpteam</name>
+    <author>TechLabPro</author>
+    <creationDate>2015-09-16</creationDate>
+    <copyright>Copyright (C) 2015. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>techlabpro@gmail.com</authorEmail>
+    <authorUrl>http://www.techlabpro.com</authorUrl>
+    <version>1.0</version>
+    <description>PLG_CONTENT_COM_TLPTEAM_XML_DESCRIPTION</description>
+    <files>
+        <filename plugin="tlpteam">tlpteam.php</filename>
+        <filename>index.html</filename>
+    </files>
+    <languages folder="../../../languages/site/content/tlpteam">
+        
+		<language tag="en-GB">../../../languages/plugins/content/tlpteam/en-GB/en-GB.plg_content_tlpteam.ini</language>
+	    <language tag="en-GB">../../../languages/plugins/content/tlpteam/en-GB/en-GB.plg_content_tlpteam.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+
+            <fieldset name="basic">
+                
+            </fieldset>
+
+        </fields>
+    </config>
+</extension>

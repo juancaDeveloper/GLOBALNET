@@ -1,0 +1,46 @@
+.dj-orange .djtabs-title{
+	color:#DD4125;
+}
+.dj-orange .djtabs-in-border{
+	border-color: #DD4125;
+}
+.dj-orange .djtabs-panel-title{
+	color:#DD4125;
+}
+.dj-orange .djtabs-article-category > a:visited, 
+.dj-orange .djtabs-article-category > a:link{
+	color:#DD4125;
+}
+.dj-orange span.djtabs-readmore a:visited, 
+.dj-orange span.djtabs-readmore a:link{
+	color:#DD4125;
+}
+.dj-orange .djtabs-article-content a:visited, .dj-orange .djtabs-article-content a:link {
+	color:#DD4125;
+}
+
+.dj-orange .djtabs-title{
+	background-image:url('../../images/dj-orange/tab.png');
+}
+.dj-orange .djtabs-title-img-right{
+	background:url('../../images/dj-orange/tab-right.png') no-repeat;
+}
+.dj-orange .djtabs-active > span.djtabs-title-img-right{
+	background:url('../../images/dj-orange/tab-active-right.png') no-repeat;
+}
+.dj-orange .djtabs-active{
+	background-image:url('../../images/dj-orange/tab-active.png');
+}
+.dj-orange .djtabs-panel{
+	background:url('../../images/dj-orange/accordion-panel.png') repeat-x;
+}
+.dj-orange .djtabs-panel > span.djtabs-panel-toggler{
+	background:url('../../images/dj-orange/arrow-down.png') no-repeat center;
+}
+.dj-orange .djtabs-panel-active > span.djtabs-panel-toggler{
+	background:url('../../images/dj-orange/arrow-up.png') no-repeat center;
+}
+/* 1.3.1 */
+.dj-orange .djtabs-title-wrapper .djtabs-title{
+    outline: none;
+}

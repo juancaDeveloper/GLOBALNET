@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="2.5" method="upgrade">
+	<name>SJ Mega Menu</name>
+    <creationDate>March 2017</creationDate>
+    <author>YouTech Company</author>
+    <copyright>Copyright (c) 2009-2012 YouTech Company</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <authorEmail>contact@ytcvn.com</authorEmail>
+    <authorUrl>http://www.smartaddons.com</authorUrl>
+    <version>3.1.1</version>
+    <description>TPL_YTFRAMEWORK_XML_DESCRIPTION</description>
+ 	<packagename>sjmegamenu</packagename>
+ 	<packager>SmartAddons</packager>
+ 	<packagerurl>http://www.smartaddons.com</packagerurl>
+ 	<files folder="packages">
+   		<file type="module" id="sj_megamenu" client="site">mod_sj_megamenu_res.zip</file>
+   		<file type="plugin" id="sj_megamenu" group="system">plg_extral_params_for_menu.zip</file>
+   		<file type="plugin" id="sj_megamenu" group="ajax">plg_ajax_for_menu.zip</file>
+ 	</files>
+</extension>

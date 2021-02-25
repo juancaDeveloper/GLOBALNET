@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <fields name="request">
+        <fieldset name="request">
+            <field
+                name="c"
+                type="hidden"
+                default="rss"
+            />
+        </fieldset>
+    </fields>	
+    <layout title="RSS Control Panel">
+        <message>
+			<![CDATA[RSS control panel.]]>
+        </message>
+    </layout>
+    <state>
+        <name>RSS Control Panel</name>
+        <description>RSS Control Panel.</description>
+    </state>
+</metadata>

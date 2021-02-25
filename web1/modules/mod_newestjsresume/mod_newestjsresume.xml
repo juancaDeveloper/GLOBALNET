@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0"  client="site" method="upgrade">
+	<name>JS newest Resumes</name>
+	<author>Joom Sky</author>
+	<creationDate>Nov 29, 2010</creationDate>
+	<copyright>(C) 2009 - 2010. All rights reserved.</copyright>
+	<license>GNU/GPL</license>
+	<authorEmail>ahmad@joomsky.com</authorEmail>
+	<authorUrl>www.joomsky.com</authorUrl>
+	<version>1.0.3</version>
+	<description>Shows newest resumes from JS Jobs database. </description>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+					<field name="title" type="text" default="Newest Resumes" label="JS_TITLE" description="JS_MODULE_TITLE" />
+					
+					<field name="showtitle" type="list" default="1" label="JS_SHOW_TITLE" description="JS_SHOW_OR_HIDE_MODULE_TITLE">
+						<option value="0">JS_HIDE</option>
+						<option value="1">JS_SHOW</option>
+					</field>
+					<field name="salary" type="list" default="1" label="Show salary" description="Show hide salary">
+						<option value="0">JS_HIDE</option>
+						<option value="1">JS_SHOW</option>
+					</field>
+					<field name="description" type="text" default="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et." label="Description" description="Module description text" />
+					<field name="applicationtitle" type="list" default="1" label="JS_APPLICATION_TITLE" description="JS_SHOW_OR_HIDE_APPLICATIONTITLE">
+						<option value="0">JS_HIDE_ALL</option>
+						<option value="1">JS_SHOW_ALL</option>
+						<option value="2">JS_SHOW_DESKTOP_AND_TABLET</option>
+						<option value="3">JS_SHOW_DESKTOP_AND_MOBILE</option>
+						<option value="4">JS_SHOW_TABLET_AND_MOBILE</option>
+						<option value="5">JS_SHOW_DESKTOP</option>
+						<option value="6">JS_SHOW_TABLET</option>
+						<option value="7">JS_SHOW_MOBILE</option>
+					</field>
+					<field name="name" type="list" default="1" label="JS_NAME" description="JS_SHOW_OR_HIDE_NAME">
+						<option value="0">JS_HIDE_ALL</option>
+						<option value="1">JS_SHOW_ALL</option>
+						<option value="2">JS_SHOW_DESKTOP_AND_TABLET</option>
+						<option value="3">JS_SHOW_DESKTOP_AND_MOBILE</option>
+						<option value="4">JS_SHOW_TABLET_AND_MOBILE</option>
+						<option value="5">JS_SHOW_DESKTOP</option>
+						<option value="6">JS_SHOW_TABLET</option>
+						<option value="7">JS_SHOW_MOBILE</option>
+					</field>
+					<field name="category" type="list" default="1" label="JS_CATEGORY" description="JS_SHOW_OR_HIDE_CATEGORY">
+						<option value="0">JS_HIDE_ALL</option>
+						<option value="1">JS_SHOW_ALL</option>
+						<option value="2">JS_SHOW_DESKTOP_AND_TABLET</option>
+						<option value="3">JS_SHOW_DESKTOP_AND_MOBILE</option>
+						<option value="4">JS_SHOW_TABLET_AND_MOBILE</option>
+						<option value="5">JS_SHOW_DESKTOP</option>
+						<option value="6">JS_SHOW_TABLET</option>
+						<option value="7">JS_SHOW_MOBILE</option>
+					</field>
+					<field name="subcategory" type="list" default="0" label="JS_SUB_CATEGORY" description="JS_SHOW_OR_HIDE_SUBCATEGORY">
+						<option value="0">JS_HIDE_ALL</option>
+						<option value="1">JS_SHOW_ALL</option>
+						<option value="2">JS_SHOW_DESKTOP_AND_TABLET</option>
+						<option value="3">JS_SHOW_DESKTOP_AND_MOBILE</option>
+						<option value="4">JS_SHOW_TABLET_AND_MOBILE</option>
+						<option value="5">JS_SHOW_DESKTOP</option>
+						<option value="6">JS_SHOW_TABLET</option>
+						<option value="7">JS_SHOW_MOBILE</option>
+					</field>
+					<field name="workpreference" type="list" default="1" label="JS_WORK_PREFERENCE" description="JS_SHOW_OR_HIDE_WORK_PREFERENCE">
+						<option value="0">JS_HIDE_ALL</option>
+						<option value="1">JS_SHOW_ALL</option>
+						<option value="2">JS_SHOW_DESKTOP_AND_TABLET</option>
+						<option value="3">JS_SHOW_DESKTOP_AND_MOBILE</option>
+						<option value="4">JS_SHOW_TABLET_AND_MOBILE</option>
+						<option value="5">JS_SHOW_DESKTOP</option>
+						<option value="6">JS_SHOW_TABLET</option>
+						<option value="7">JS_SHOW_MOBILE</option>
+					</field>
+					<field name="experience" type="list" default="1" label="JS_EXPERIENCE" description="JS_SHOW_OR_HIDE_EXPERIENCE">
+						<option value="0">JS_HIDE_ALL</option>
+						<option value="1">JS_SHOW_ALL</option>
+						<option value="2">JS_SHOW_DESKTOP_AND_TABLET</option>
+						<option value="3">JS_SHOW_DESKTOP_AND_MOBILE</option>
+						<option value="4">JS_SHOW_TABLET_AND_MOBILE</option>
+						<option value="5">JS_SHOW_DESKTOP</option>
+						<option value="6">JS_SHOW_TABLET</option>
+						<option value="7">JS_SHOW_MOBILE</option>
+					</field>
+					<field name="available" type="list" default="1" label="JS_AVAILABLE" description="JS_SHOW_OR_HIDE_AVAILABLE">
+						<option value="0">JS_HIDE_ALL</option>
+						<option value="1">JS_SHOW_ALL</option>
+						<option value="2">JS_SHOW_DESKTOP_AND_TABLET</option>
+						<option value="3">JS_SHOW_DESKTOP_AND_MOBILE</option>
+						<option value="4">JS_SHOW_TABLET_AND_MOBILE</option>
+						<option value="5">JS_SHOW_DESKTOP</option>
+						<option value="6">JS_SHOW_TABLET</option>
+						<option value="7">JS_SHOW_MOBILE</option>
+					</field>
+
+					<field name="gender" type="list" default="1" label="JS_GENDER" description="JS_SHOW_OR_HIDE_GENDER">
+						<option value="0">JS_HIDE_ALL</option>
+						<option value="1">JS_SHOW_ALL</option>
+						<option value="2">JS_SHOW_DESKTOP_AND_TABLET</option>
+						<option value="3">JS_SHOW_DESKTOP_AND_MOBILE</option>
+						<option value="4">JS_SHOW_TABLET_AND_MOBILE</option>
+						<option value="5">JS_SHOW_DESKTOP</option>
+						<option value="6">JS_SHOW_TABLET</option>
+						<option value="7">JS_SHOW_MOBILE</option>
+					</field>
+					<field name="nationality" type="list" default="1" label="JS_NATIONALITY" description="JS_SHOW_OR_HIDE_NATIONALITY">
+						<option value="0">JS_HIDE_ALL</option>
+						<option value="1">JS_SHOW_ALL</option>
+						<option value="2">JS_SHOW_DESKTOP_AND_TABLET</option>
+						<option value="3">JS_SHOW_DESKTOP_AND_MOBILE</option>
+						<option value="4">JS_SHOW_TABLET_AND_MOBILE</option>
+						<option value="5">JS_SHOW_DESKTOP</option>
+						<option value="6">JS_SHOW_TABLET</option>
+						<option value="7">JS_SHOW_MOBILE</option>
+					</field>
+					<field name="location" type="list" default="1" label="JS_LOCATION" description="JS_SHOW_OR_HIDE_LOCATION">
+						<option value="0">JS_HIDE_ALL</option>
+						<option value="1">JS_SHOW_ALL</option>
+						<option value="2">JS_SHOW_DESKTOP_AND_TABLET</option>
+						<option value="3">JS_SHOW_DESKTOP_AND_MOBILE</option>
+						<option value="4">JS_SHOW_TABLET_AND_MOBILE</option>
+						<option value="5">JS_SHOW_DESKTOP</option>
+						<option value="6">JS_SHOW_TABLET</option>
+						<option value="7">JS_SHOW_MOBILE</option>
+					</field>
+					<field name="posteddate" type="list" default="1" label="JS_POSTED" description="JS_SHOW_OR_HIDE_POSTED_DATE">
+						<option value="0">JS_HIDE_ALL</option>
+						<option value="1">JS_SHOW_ALL</option>
+						<option value="2">JS_SHOW_DESKTOP_AND_TABLET</option>
+						<option value="3">JS_SHOW_DESKTOP_AND_MOBILE</option>
+						<option value="4">JS_SHOW_TABLET_AND_MOBILE</option>
+						<option value="5">JS_SHOW_DESKTOP</option>
+						<option value="6">JS_SHOW_TABLET</option>
+						<option value="7">JS_SHOW_MOBILE</option>
+					</field>
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="noofresumes" type="text" default="7" label="JS_DISPLAY_NUMBER_OF_RESUMES" description="JS_NUMBER_OF_RESUMES_TO_SHOW" filter="integer"/>
+				<field name="listtype" type="list" default="1" label="JS_LISTING_STYLE" description="JS_MODULE_LISTING_STYLE">
+					<option value="0">JS_LIST_STYLE</option>
+					<option value="1">JS_BOX_STYLE</option>
+				</field>
+				<field name="logodatarow" type="list" default="1" label="JS_BOX_STYLE" description="JS_WORKS_WITH_BOX_STYLE_ONLY">
+					<option value="1">JS_HORIZONTAL</option>
+					<option value="2">JS_VERTICAL</option>
+				</field>
+				<field name="datacolumn" type="list" default="1" label="JS_FIELDS_COLUMN" description="JS_WORKS_WITH_DESKTOP_SCREEN_SIZE_ONLY" filter="integer">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</field>
+				<field name="moduleheight" type="text" default="400" label="JS_MODULE_HEIGHT" description="JS_WORKS_WITH_DESKTOP_SCREEN_SIZE_ONLY" filter="integer"/>
+				<field name="resumeheight" type="text" default="250" label="JS_RESUME_HEIGHT" description="JS_WORKS_WITH_DESKTOP_SCREEN_SIZE_ONLY" filter="integer"/>
+				<field name="photowidth" type="text" default="150" label="JS_RESUME_LOGO_WIDTH" description="JS_WORKS_WITH_HORIZONTAL_BOX_STYLE_ONLY" filter="integer"/>
+				<field name="photoheight" type="text" default="90" label="JS_RESUME_LOGO_HEIGHT" description="JS_WORKS_WITH_VERTICAL_BOX_STYLE_ONLY" filter="integer"/>
+				<field name="resumesinrow" type="list" default="1" label="JS_NO_OF_JOBS_PER_ROW" description="JS_MAXIMUM_JOBS_PER_ROW_EFFECTS_DESKTOP_SCREEN_SIZE_ONLY">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</field>
+				<field name="resumesinrowtab" type="list" default="1" label="JS_NO_OF_JOBS_ROW" description="JS_MAXIMUM_JOBS_PER_ROW_EFFECTS_TABLET_SCREEN_SIZE_ONLY">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</field>
+				<field name="resumemargintop" type="text" default="10" label="JS_TOP_MARGIN" description="JS_TOP_MARGIN_FOR_SINGLE_JOB" filter="integer"/>
+				<field name="resumemarginleft" type="text" default="10" label="JS_LEFT_MARGIN" description="JS_LEFT_MARGIN_FOR_SINGLE_JOB" filter="integer"/>
+				
+				<field name="Itemid" type="text" default="" label="JS_ITEMID" description="JS_ITEMID" />
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+			
+				<field name="color1" type="color" label="TITLE_COLOR" description="LEAVE_BLANK_FOR_DEFAULT_COLOR" />
+				<field name="color6" type="color" label="TITLE_BOTTOM_BORDER_COLOR" description="LEAVE_BLANK_FOR_DEFAULT_COLOR" />
+				<field name="color2" type="color" label="BACKGROUND_COLOR" description="LEAVE_BLANK_FOR_DEFAULT_COLOR" />
+				<field name="color3" type="color" label="BORDER_COLOR" description="LEAVE_BLANK_FOR_DEFAULT_COLOR" />
+				<field name="color4" type="color" label="DATA_LABEL_COLOR" description="LEAVE_BLANK_FOR_DEFAULT_COLOR" />
+				<field name="color5" type="color" label="DATA_VALUE_COLOR" description="LEAVE_BLANK_FOR_DEFAULT_COLOR" />
+
+			</fieldset>
+		</fields>
+	</config>
+	<files>
+		<filename module="mod_newestjsresume">mod_newestjsresume.php</filename>
+		<filename module="mod_newestjsresume">helper.php</filename>
+		<folder module="mod_newestjsresume">tmpl</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_newestjsresume.ini</language>
+	</languages>
+</extension>
+

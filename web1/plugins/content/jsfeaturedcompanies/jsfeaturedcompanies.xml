@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="content" method="upgrade"> 
+	<name>JS Featured Companies</name>
+	<author>Joom Sky</author>
+	<creationDate>Aug 25, 2010</creationDate>
+	<copyright>Copyright (C) 2010. All rights reserved.</copyright>
+	<license>GNU/GPL</license>
+	<authorEmail>ahmad@joomsky.com</authorEmail>
+	<authorUrl>www.joomsky.com</authorUrl>
+	<version>1.0</version>
+	<description>Usage {jsfeaturedcompanies}. Show featured companies from JS Jobs database. </description>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="title" type="text" default="Featured Companies" label="JS_TITLE" description="JS_TITLE" />
+				<field name="showtitle" type="list" default="1" label="JS_SHOW_TITLE" description="JS_SHOW_TITLE">
+					<option value="0">JS_HIDE</option>
+					<option value="1">JS_SHOW</option>
+				</field>
+				<field name="companylogo" type="list" default="1" label="JS_COMPANY_LOGO" description="SHOW_HIDE_THE_COMPANY_LOGO">
+					<option value="0">JS_HIDE_ALL</option>
+					<option value="1">JS_SHOW_ALL</option>
+					<option value="2">JS_SHOW_DESKTOP_AND_TABLET</option>
+					<option value="3">JS_SHOW_DESKTOP_AND_MOBILE</option>
+					<option value="4">JS_SHOW_TABLET_AND_MOBILE</option>
+					<option value="5">JS_SHOW_DESKTOP</option>
+					<option value="6">JS_SHOW_TABLET</option>
+					<option value="7">JS_SHOW_MOBILE</option>
+				</field>
+				
+				<field name="category" type="list" default="1" label="JS_CATEGORY" description="SHOW_HIDE_THE_CATEGORY">
+					<option value="0">JS_HIDE_ALL</option>
+					<option value="1">JS_SHOW_ALL</option>
+					<option value="2">JS_SHOW_DESKTOP_AND_TABLET</option>
+					<option value="3">JS_SHOW_DESKTOP_AND_MOBILE</option>
+					<option value="4">JS_SHOW_TABLET_AND_MOBILE</option>
+					<option value="5">JS_SHOW_DESKTOP</option>
+					<option value="6">JS_SHOW_TABLET</option>
+					<option value="7">JS_SHOW_MOBILE</option>
+				</field>
+				<field name="location" type="list" default="1" label="JS_LOCATION" description="Show/Hide the location">
+					<option value="0">JS_HIDE_ALL</option>
+					<option value="1">JS_SHOW_ALL</option>
+					<option value="2">JS_SHOW_DESKTOP_AND_TABLET</option>
+					<option value="3">JS_SHOW_DESKTOP_AND_MOBILE</option>
+					<option value="4">JS_SHOW_TABLET_AND_MOBILE</option>
+					<option value="5">JS_SHOW_DESKTOP</option>
+					<option value="6">JS_SHOW_TABLET</option>
+					<option value="7">JS_SHOW_MOBILE</option>
+				</field>
+				<field name="posteddate" type="list" default="1" label="JS_POSTED" description="Show/Hide the posted date">
+					<option value="0">JS_HIDE_ALL</option>
+					<option value="1">JS_SHOW_ALL</option>
+					<option value="2">JS_SHOW_DESKTOP_AND_TABLET</option>
+					<option value="3">JS_SHOW_DESKTOP_AND_MOBILE</option>
+					<option value="4">JS_SHOW_TABLET_AND_MOBILE</option>
+					<option value="5">JS_SHOW_DESKTOP</option>
+					<option value="6">JS_SHOW_TABLET</option>
+					<option value="7">JS_SHOW_MOBILE</option>
+				</field>
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="noofcompanies" type="text" default="7" label="JS_DISPLAY_MAXIMUM_NUMBER_OF_COMAPANIES" description="Display maximum number of companies to show" filter="integer"/>
+				<field name="listtype" type="list" default="1" label="JS_LISTTYPE" description="JS_LISTTYPE">
+					<option value="0">JS_LIST_STYLE</option>
+					<option value="1">JS_BOX_STYLE</option>
+				</field>
+                <field name="moduleheight" type="text" default="400px" label="JS_MODULE_HEIGHT" description="JS_MODULE_HEIGHT_IE" filter="integer"/>
+                <field name="jobwidth" type="text" default="200px" label="JS_SINGLE_COMPANY_WIDTH" description="JS_SINGLE_COMPANY_WIDTH_IE" filter="integer"/>
+                <field name="jobheight" type="text" default="200px" label="JS_SINGLE_COMPANY_HEIGHT" description="JS_SINGLE_COMPANY_HEIGHT_IE" filter="integer"/>
+                <field name="companylogowidth" type="text" default="210px" label="JS_COMPANYLOGO_WIDTH" description="JS_COMPANYLOGO_WIDTH_IE" filter="integer"/>
+				<field name="companylogoheight" type="text" default="50px" label="JS_COMPANYLOGO_HEIGHT" description="JS_COMPANYLOGO_HEIGHT_IE" filter="integer"/>
+				<field name="jobfloat" type="list" default="1" label="JS_JOBS_FLOAT" description="JS_JOBS_FLOAT_TO_EACH_OTHER">
+					<option value="0">JS_NO</option>
+					<option value="1">JS_YES</option>
+				</field>
+                <field name="jobmargintop" type="text" default="10px" label="JS_JOB_MARGIN_TOP" description="JS_JOB_MARGIN_TOP_FOR_SINGLE_JOB_IE" filter="integer"/>
+                <field name="jobmarginleft" type="text" default="10px" label="JS_JOB_MARGIN_LEFT" description="JS_JOB_MARGIN_LEFT_FOR_SINGLE_JOB_IE" filter="integer"/>
+                <field name="datacolumn" type="text" default="1" label="JS_DATA_COLUMN" description="JS_DATA_COLUMN" filter="integer"/>
+				<field name="speed" type="text" default="5" label="JS_SPEED" description="JS_GREATER_THE_NUMBER_FASTER_THE_SPEED_RANGE_1-10" filter="integer"/>
+				<field name="Itemid" type="text" default="" label="ITEMID" description="ITEMID" />
+				<field name="color1" type="color" label="TITLE_COLOR" description="LEAVE_BLANK_FOR_DEFAULT_COLOR" />
+				<field name="color6" type="color" label="TITLE_BOTTOM_BORDER_COLOR" description="LEAVE_BLANK_FOR_DEFAULT_COLOR" />
+				<field name="color2" type="color" label="BACKGROUND_COLOR" description="LEAVE_BLANK_FOR_DEFAULT_COLOR" />
+				<field name="color3" type="color" label="BORDER_COLOR" description="LEAVE_BLANK_FOR_DEFAULT_COLOR" />
+				<field name="color4" type="color" label="DATA_LABEL_COLOR" description="LEAVE_BLANK_FOR_DEFAULT_COLOR" />
+				<field name="color5" type="color" label="DATA_VALUE_COLOR" description="LEAVE_BLANK_FOR_DEFAULT_COLOR" />
+				
+			</fieldset>
+		</fields>
+	</config>
+	<files>
+		<filename plugin="jsfeaturedcompanies">jsfeaturedcompanies.php</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_content_jsfeaturedcompanies.ini</language>
+	</languages>
+	
+</extension>

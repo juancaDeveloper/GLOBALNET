@@ -1,0 +1,12 @@
+ul.jssocialicons > li > a.iconset-blacksquare {
+    background: #222;
+    color: #fff;
+    border-radius: 3px !important;
+    -moz-border-radius: 3px !important;
+    -webkit-border-radius: 3px !important;
+    -o-border-radius: 3px !important;
+}
+
+ul.jssocialicons > li > a.iconset-blacksquare:hover {
+    background: #555;
+}

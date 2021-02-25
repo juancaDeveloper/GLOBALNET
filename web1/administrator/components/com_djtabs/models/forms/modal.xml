@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+			<fieldset name="basic" addfieldpath="/administrator/components/com_djtabs/models/fields">
+			<field name="group_id" type="sql" default="0"  key_field="id" value_field="title"
+				label="COM_DJTABS_SELECT_GROUP" query="SELECT id, title FROM #__djtabs_groups" required="true"/>		
+			<field 
+				name="theme"
+				type="djtheme" 
+				label="COM_DJTABS_SELECT_THEME"
+				required="true"
+			/>			
+			<field
+			name="layout"
+			type="list"
+			label="COM_DJTABS_SELECT_LAYOUT"
+			size="1"
+			default="tabs"
+			required="true"
+			>
+			<option value="tabs">
+				COM_DJTABS_LAYOUT_TABS</option>
+			<option value="accordion">
+				COM_DJTABS_LAYOUT_ACCORDION</option>			
+			</field>
+				
+			</fieldset>
+	
+</form>
